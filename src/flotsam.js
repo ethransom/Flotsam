@@ -14,6 +14,7 @@ var INIT_LEVEL_TIME = 45;
 var GAME_STATE_PLAYING = 0;
 var GAME_STATE_LEVEL_SELECT = 1;
 var GAME_STATE_END_SCREEN = 2;
+var GAME_STATE_PAUSED = 3;
 
 var BAD_GUY_COLLIS_RADIUS = 2;
 var HERO_COLLIS_RADIUS = 1;
@@ -842,8 +843,9 @@ function init(levelName) {
 	debugDraw.SetLineThickness(1.0);
 	debugDraw.SetFlags(b2DebugDraw.e_shapeBit | b2DebugDraw.e_jointBit);
 	world.SetDebugDraw(debugDraw);
-
-	window.setInterval(update, 1000 / 60);
+	
+	//start game loop
+	update();
 }
 
 function UpdateObjects()
@@ -1642,6 +1644,14 @@ function updateGame() {
 	world.ClearForces();
 };
 
+function pauseGame() {	gGameState = GAME_STATE_PAUSED;	}
+
+function unpauseGame() {	
+	gGameState = GAME_STATE_PLAYING;	
+	update();	//restart game loop
+}
+
+
 function update()
 {
 	if (gGameState == GAME_STATE_PLAYING)
@@ -1656,6 +1666,9 @@ function update()
 		drawstuff();
 		drawending();
 	}
+	
+	if ( gGameState != GAME_STATE_PAUSED ) 
+		window.setTimeout( update, 1000/60 );
 }
 
 //http://answers.oreilly.com/topic/1929-how-to-use-the-canvas-and-draw-elements-in-html5/

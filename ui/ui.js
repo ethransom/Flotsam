@@ -1,7 +1,7 @@
-function load_level(num) {
+function load_level(level) {
 	page('canvas');
-	//alert("init " + num);
-	init(num);
+
+	init(level);
 }
 var $page = null;
 

@@ -1,0 +1,66 @@
+<html>
+   <head>
+      <title>Flotsam!</title>
+	  
+	  <style>
+@import url("ui/app.css");
+@import url("ui/gh-buttons.css");
+</style>
+<link href='http://fonts.googleapis.com/css?family=Macondo+Swash+Caps' rel='stylesheet' type='text/css'>
+   </head>
+   <body>
+	  <canvas id="canvas" width="800" height="600" class="page"></canvas>
+	 
+	   <script type="text/javascript" src="src/Box2D.js"></script>
+	   <script type="text/javascript" src="src/vector.js"></script>
+	   <script type="text/javascript" src="src/flotsam.js"></script>
+	   <script type="text/javascript" src="src/js_utils.js"></script>
+	   <script type="text/javascript" src="src/hud.js"></script>
+	   <script type="text/javascript" src="src/sound.js"></script>
+	   
+	   <script src="ui/jQuery.js"></script>
+	<script src="levels/level-list.js"></script>
+	<script src="ui/ui.js"></script>
+	   
+	   <div id="level-select" class="page">
+			<!-- <p class="header"></p> -->
+			<p class="list">	</p>
+			<p class="score-counter"><button class="back">Back</button></p>
+		</div>
+
+		<div id="main-menu" class="page">
+			<span>Flotsam</span>
+			<button id="play" class="button primary">Play</button><br><br>
+			<button id="credits" class="button primary">Credits</button>
+			<p id="bannerleft"></p>
+			<p id="bannerright"></p>
+		</div>
+
+		<div id="credits-list" class="page">
+		<button class="back">Back</button>
+			<h1>CREDITS</h1>
+
+			<h2>DESIGN</h2>
+
+			Jared Evans<br>
+			Mike Nielsen<br>
+			Risa Nielsen<br>
+			Seth Bell
+
+			<h2>PROGRAMMING</h2>
+
+			Steve Taylor<br>
+			Ethan Ransom
+
+			<h2>ART</h2>
+
+			Joseph Pearman<br>
+			Jared Evans
+
+			<h2>AUDIO</h2>
+
+			Alex Taylor
+		</div>
+	</body>
+
+</html>

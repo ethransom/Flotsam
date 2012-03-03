@@ -1,0 +1,1736 @@
+<?xml version="1.0"?>
+<Level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Level_01" Visible="true">
+    <Layers>
+        <Layer Name="Collision" Visible="true">
+            <Items>
+                <Item xsi:type="RectangleItem" Name="Rectangle_0001" Visible="true">
+                    <Position>
+                        <X>-566</X>
+                        <Y>-538</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Width>54</Width>
+                    <Height>1088</Height>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="RectangleItem" Name="Rectangle_0002" Visible="true">
+                    <Position>
+                        <X>-572</X>
+                        <Y>-562</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Width>1112</Width>
+                    <Height>50</Height>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="RectangleItem" Name="Rectangle_0003" Visible="true">
+                    <Position>
+                        <X>512</X>
+                        <Y>-554</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Width>54</Width>
+                    <Height>1088</Height>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="RectangleItem" Name="Rectangle_0004" Visible="true">
+                    <Position>
+                        <X>-553</X>
+                        <Y>512</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Width>1112</Width>
+                    <Height>50</Height>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="RectangleItem" Name="Rectangle_0073" Visible="true">
+                    <Position>
+                        <X>-519</X>
+                        <Y>-475</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Width>1068</Width>
+                    <Height>50</Height>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="RectangleItem" Name="Rectangle_0074" Visible="true">
+                    <Position>
+                        <X>253</X>
+                        <Y>-661</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Width>36</Width>
+                    <Height>996</Height>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0075" Visible="true">
+                    <Position>
+                        <X>357</X>
+                        <Y>303</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Radius>121.655251</Radius>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0076" Visible="true">
+                    <Position>
+                        <X>259</X>
+                        <Y>-255</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Radius>56.5685425</Radius>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0077" Visible="true">
+                    <Position>
+                        <X>205</X>
+                        <Y>-385</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Radius>92.47703</Radius>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0078" Visible="true">
+                    <Position>
+                        <X>83</X>
+                        <Y>-435</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Radius>60.530983</Radius>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0079" Visible="true">
+                    <Position>
+                        <X>415</X>
+                        <Y>407</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Radius>121.655251</Radius>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0081" Visible="true">
+                    <Position>
+                        <X>-333</X>
+                        <Y>135</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Radius>47.2016945</Radius>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0082" Visible="true">
+                    <Position>
+                        <X>-283</X>
+                        <Y>173</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Radius>50.47772</Radius>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0083" Visible="true">
+                    <Position>
+                        <X>-259</X>
+                        <Y>233</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Radius>40.7921562</Radius>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0084" Visible="true">
+                    <Position>
+                        <X>-249</X>
+                        <Y>311</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Radius>52.34501</Radius>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0085" Visible="true">
+                    <Position>
+                        <X>71</X>
+                        <Y>333</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Radius>27</Radius>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0086" Visible="true">
+                    <Position>
+                        <X>-37</X>
+                        <Y>415</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Radius>27</Radius>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0135" Visible="true">
+                    <Position>
+                        <X>-294</X>
+                        <Y>-208</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Radius>36</Radius>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0136" Visible="true">
+                    <Position>
+                        <X>-268</X>
+                        <Y>-232</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Radius>36</Radius>
+                    <FillColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </FillColor>
+                </Item>
+            </Items>
+            <ScrollSpeed>
+                <X>1</X>
+                <Y>1</Y>
+            </ScrollSpeed>
+        </Layer>
+        <Layer Name="Land" Visible="true">
+            <Items>
+                <Item xsi:type="TextureItem" Name="Texture_0142" Visible="false">
+                    <Position>
+                        <X>0</X>
+                        <Y>0</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>0</Rotation>
+                    <Scale>
+                        <X>1.15</X>
+                        <Y>1</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\occean_occean_03.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\occean_occean_03</asset_name>
+                    <Origin>
+                        <X>1024</X>
+                        <Y>1024</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0143" Visible="true">
+                    <Position>
+                        <X>0</X>
+                        <Y>0</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>0</Rotation>
+                    <Scale>
+                        <X>1</X>
+                        <Y>1</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\border.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\border</asset_name>
+                    <Origin>
+                        <X>1024</X>
+                        <Y>1024</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0110" Visible="true">
+                    <Position>
+                        <X>-334</X>
+                        <Y>134</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>4.151888</Rotation>
+                    <Scale>
+                        <X>0.19505842</X>
+                        <Y>0.19505842</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_03.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_03</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0112" Visible="true">
+                    <Position>
+                        <X>-272</X>
+                        <Y>188</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>-1.00756788</Rotation>
+                    <Scale>
+                        <X>0.222359523</X>
+                        <Y>0.222359523</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_01.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_01</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0111" Visible="true">
+                    <Position>
+                        <X>-293</X>
+                        <Y>170</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>1.50710237</Rotation>
+                    <Scale>
+                        <X>0.236917913</X>
+                        <Y>0.236917913</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_02.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_02</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0114" Visible="true">
+                    <Position>
+                        <X>-317</X>
+                        <Y>150</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>0.408991128</Rotation>
+                    <Scale>
+                        <X>0.113289312</X>
+                        <Y>0.113289312</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_02.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_02</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0113" Visible="true">
+                    <Position>
+                        <X>-284</X>
+                        <Y>176</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>3.75954437</Rotation>
+                    <Scale>
+                        <X>0.133048952</X>
+                        <Y>0.133048952</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_02.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_02</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0087" Visible="true">
+                    <Position>
+                        <X>415</X>
+                        <Y>356</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>1.56004989</Rotation>
+                    <Scale>
+                        <X>0.7915571</X>
+                        <Y>0.7915571</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_01.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_01</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0088" Visible="true">
+                    <Position>
+                        <X>591</X>
+                        <Y>448</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>3.88215828</Rotation>
+                    <Scale>
+                        <X>1</X>
+                        <Y>1</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_01.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_01</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0089" Visible="true">
+                    <Position>
+                        <X>438</X>
+                        <Y>68</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>-0.147125959</Rotation>
+                    <Scale>
+                        <X>1</X>
+                        <Y>1</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_02.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_02</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0090" Visible="true">
+                    <Position>
+                        <X>368</X>
+                        <Y>-348</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>0</Rotation>
+                    <Scale>
+                        <X>1</X>
+                        <Y>1</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_03.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_03</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0091" Visible="true">
+                    <Position>
+                        <X>425</X>
+                        <Y>-175</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>2.226359</Rotation>
+                    <Scale>
+                        <X>1</X>
+                        <Y>1</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_02.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_02</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0092" Visible="true">
+                    <Position>
+                        <X>112</X>
+                        <Y>-594</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>3.90417147</Rotation>
+                    <Scale>
+                        <X>1</X>
+                        <Y>1</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_01.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_01</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0093" Visible="true">
+                    <Position>
+                        <X>551</X>
+                        <Y>216</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>0</Rotation>
+                    <Scale>
+                        <X>1</X>
+                        <Y>1</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_03.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_03</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0094" Visible="true">
+                    <Position>
+                        <X>-226</X>
+                        <Y>-589</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>0.5535357</Rotation>
+                    <Scale>
+                        <X>1</X>
+                        <Y>1</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_02.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_02</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0095" Visible="true">
+                    <Position>
+                        <X>-544</X>
+                        <Y>-607</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>-1.92388725</Rotation>
+                    <Scale>
+                        <X>1</X>
+                        <Y>1</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_01.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_01</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0096" Visible="true">
+                    <Position>
+                        <X>467</X>
+                        <Y>302</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>1.10631871</Rotation>
+                    <Scale>
+                        <X>0.7359723</X>
+                        <Y>0.7359723</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_01.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_01</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0097" Visible="true">
+                    <Position>
+                        <X>601</X>
+                        <Y>418</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>-1.37944555</Rotation>
+                    <Scale>
+                        <X>0.702271163</X>
+                        <Y>0.702271163</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_01.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_01</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0098" Visible="true">
+                    <Position>
+                        <X>449</X>
+                        <Y>88</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>2.54305172</Rotation>
+                    <Scale>
+                        <X>0.851696432</X>
+                        <Y>0.851696432</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_03.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_03</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0099" Visible="true">
+                    <Position>
+                        <X>489</X>
+                        <Y>-193</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>-1.986197</Rotation>
+                    <Scale>
+                        <X>1</X>
+                        <Y>1</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_02.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_02</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0100" Visible="true">
+                    <Position>
+                        <X>163</X>
+                        <Y>-343</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>0</Rotation>
+                    <Scale>
+                        <X>0.102575861</X>
+                        <Y>0.102575861</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_03.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_03</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0102" Visible="true">
+                    <Position>
+                        <X>-574</X>
+                        <Y>-668</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>2.63146687</Rotation>
+                    <Scale>
+                        <X>1</X>
+                        <Y>1</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_02.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_02</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0103" Visible="true">
+                    <Position>
+                        <X>-318</X>
+                        <Y>-683</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>-1.550439</Rotation>
+                    <Scale>
+                        <X>0.865610361</X>
+                        <Y>0.865610361</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_01.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_01</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0104" Visible="true">
+                    <Position>
+                        <X>-37</X>
+                        <Y>-668</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>0</Rotation>
+                    <Scale>
+                        <X>1</X>
+                        <Y>1</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_01.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_01</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0105" Visible="true">
+                    <Position>
+                        <X>246</X>
+                        <Y>-617</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>3.20453429</Rotation>
+                    <Scale>
+                        <X>1</X>
+                        <Y>1</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_02.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_02</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0106" Visible="true">
+                    <Position>
+                        <X>456</X>
+                        <Y>-440</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>0</Rotation>
+                    <Scale>
+                        <X>1</X>
+                        <Y>1</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_03.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_03</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0107" Visible="true">
+                    <Position>
+                        <X>-37</X>
+                        <Y>416</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>-1.764796</Rotation>
+                    <Scale>
+                        <X>0.117110856</X>
+                        <Y>0.117110856</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_02.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_02</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0108" Visible="true">
+                    <Position>
+                        <X>72</X>
+                        <Y>332</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>1.23805881</Rotation>
+                    <Scale>
+                        <X>0.11525321</X>
+                        <Y>0.11525321</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_03.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_03</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0109" Visible="true">
+                    <Position>
+                        <X>-252</X>
+                        <Y>304</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>2.31178045</Rotation>
+                    <Scale>
+                        <X>0.235254154</X>
+                        <Y>0.235254154</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_01.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_01</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0116" Visible="true">
+                    <Position>
+                        <X>-245</X>
+                        <Y>310</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>0.117300451</Rotation>
+                    <Scale>
+                        <X>0.149773061</X>
+                        <Y>0.149773061</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_01.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_01</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0137" Visible="true">
+                    <Position>
+                        <X>-271</X>
+                        <Y>-226</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>0.08273941</Rotation>
+                    <Scale>
+                        <X>0.16972816</X>
+                        <Y>0.16972816</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_01.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_01</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0138" Visible="true">
+                    <Position>
+                        <X>-291</X>
+                        <Y>-213</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>3.2352252</Rotation>
+                    <Scale>
+                        <X>0.16972816</X>
+                        <Y>0.16972816</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_01.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\sand_01</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0140" Visible="true">
+                    <Position>
+                        <X>-292</X>
+                        <Y>-210</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>3.35163879</Rotation>
+                    <Scale>
+                        <X>0.105536647</X>
+                        <Y>0.105536647</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_03.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_03</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+                <Item xsi:type="TextureItem" Name="Texture_0139" Visible="true">
+                    <Position>
+                        <X>-270</X>
+                        <Y>-232</Y>
+                    </Position>
+                    <CustomProperties />
+                    <Rotation>0.00637412071</Rotation>
+                    <Scale>
+                        <X>0.105536647</X>
+                        <Y>0.105536647</Y>
+                    </Scale>
+                    <TintColor>
+                        <R>255</R>
+                        <G>255</G>
+                        <B>255</B>
+                        <A>255</A>
+                        <PackedValue>4294967295</PackedValue>
+                    </TintColor>
+                    <FlipHorizontally>false</FlipHorizontally>
+                    <FlipVertically>false</FlipVertically>
+                    <texture_filename>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_03.png</texture_filename>
+                    <asset_name>Documents and Settings\stay\My Documents\Dropbox\Flotsam\art\grass_03</asset_name>
+                    <Origin>
+                        <X>256</X>
+                        <Y>256</Y>
+                    </Origin>
+                </Item>
+            </Items>
+            <ScrollSpeed>
+                <X>1</X>
+                <Y>1</Y>
+            </ScrollSpeed>
+        </Layer>
+        <Layer Name="Objects" Visible="true">
+            <Items>
+                <Item xsi:type="PathItem" Name="Path_0121" Visible="true">
+                    <Position>
+                        <X>-488</X>
+                        <Y>487</Y>
+                    </Position>
+                    <CustomProperties />
+                    <LocalPoints>
+                        <Vector2>
+                            <X>0</X>
+                            <Y>0</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>237</X>
+                            <Y>-79</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>481</X>
+                            <Y>-8</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>724</X>
+                            <Y>-84</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>632</X>
+                            <Y>-285</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>702</X>
+                            <Y>-492</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>636</X>
+                            <Y>-683</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>599</X>
+                            <Y>-862</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>378</X>
+                            <Y>-833</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>109</X>
+                            <Y>-878</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>17</X>
+                            <Y>-711</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>96</X>
+                            <Y>-482</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>19</X>
+                            <Y>-308</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>120</X>
+                            <Y>-147</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>25</X>
+                            <Y>-46</Y>
+                        </Vector2>
+                    </LocalPoints>
+                    <WorldPoints>
+                        <Vector2>
+                            <X>-488</X>
+                            <Y>487</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>-251</X>
+                            <Y>408</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>-7</X>
+                            <Y>479</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>236</X>
+                            <Y>403</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>144</X>
+                            <Y>202</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>214</X>
+                            <Y>-5</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>148</X>
+                            <Y>-196</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>111</X>
+                            <Y>-375</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>-110</X>
+                            <Y>-346</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>-379</X>
+                            <Y>-391</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>-471</X>
+                            <Y>-224</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>-392</X>
+                            <Y>5</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>-469</X>
+                            <Y>179</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>-368</X>
+                            <Y>340</Y>
+                        </Vector2>
+                        <Vector2>
+                            <X>-463</X>
+                            <Y>441</Y>
+                        </Vector2>
+                    </WorldPoints>
+                    <IsPolygon>false</IsPolygon>
+                    <LineWidth>4</LineWidth>
+                    <LineColor>
+                        <R>192</R>
+                        <G>0</G>
+                        <B>192</B>
+                        <A>145</A>
+                        <PackedValue>2445279424</PackedValue>
+                    </LineColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0120" Visible="true">
+                    <Position>
+                        <X>-450</X>
+                        <Y>426</Y>
+                    </Position>
+                    <CustomProperties>
+                        <Property Name="object_type" Type="string" Description="">
+                            <string>white</string>
+                        </Property>
+                        <Property Name="path" Type="Item" Description="">Path_0121</Property>
+                        <Property Name="hp" Type="string" Description="">
+                            <string>10</string>
+                        </Property>
+                        <Property Name="range" Type="string" Description="">
+                            <string>200</string>
+                        </Property>
+                        <Property Name="rate" Type="string" Description="">
+                            <string>1.2</string>
+                        </Property>
+                    </CustomProperties>
+                    <Radius>15.5241747</Radius>
+                    <FillColor>
+                        <R>255</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>145</A>
+                        <PackedValue>2449408000</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0144" Visible="true">
+                    <Position>
+                        <X>-468</X>
+                        <Y>177</Y>
+                    </Position>
+                    <CustomProperties>
+                        <Property Name="object_type" Type="string" Description="">
+                            <string>green</string>
+                        </Property>
+                        <Property Name="path" Type="Item" Description="">Path_0121</Property>
+                        <Property Name="hp" Type="string" Description="">
+                            <string>20</string>
+                        </Property>
+                        <Property Name="range" Type="string" Description="">
+                            <string>350</string>
+                        </Property>
+                        <Property Name="rate" Type="string" Description="">
+                            <string>1.00</string>
+                        </Property>
+                    </CustomProperties>
+                    <Radius>15.5241747</Radius>
+                    <FillColor>
+                        <R>255</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>145</A>
+                        <PackedValue>2449408000</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0145" Visible="true">
+                    <Position>
+                        <X>-405</X>
+                        <Y>-44</Y>
+                    </Position>
+                    <CustomProperties>
+                        <Property Name="object_type" Type="string" Description="">
+                            <string>white</string>
+                        </Property>
+                        <Property Name="path" Type="Item" Description="">Path_0121</Property>
+                        <Property Name="hp" Type="string" Description="">
+                            <string>10</string>
+                        </Property>
+                        <Property Name="range" Type="string" Description="">
+                            <string>200</string>
+                        </Property>
+                        <Property Name="rate" Type="string" Description="">
+                            <string>1.2</string>
+                        </Property>
+                    </CustomProperties>
+                    <Radius>15.5241747</Radius>
+                    <FillColor>
+                        <R>255</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>145</A>
+                        <PackedValue>2449408000</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0146" Visible="true">
+                    <Position>
+                        <X>-420</X>
+                        <Y>-319</Y>
+                    </Position>
+                    <CustomProperties>
+                        <Property Name="object_type" Type="string" Description="">
+                            <string>blue</string>
+                        </Property>
+                        <Property Name="path" Type="Item" Description="">Path_0121</Property>
+                        <Property Name="hp" Type="string" Description="">
+                            <string>30</string>
+                        </Property>
+                        <Property Name="range" Type="string" Description="">
+                            <string>1000</string>
+                        </Property>
+                        <Property Name="rate" Type="string" Description="">
+                            <string>1.7</string>
+                        </Property>
+                    </CustomProperties>
+                    <Radius>15.5241747</Radius>
+                    <FillColor>
+                        <R>255</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>145</A>
+                        <PackedValue>2449408000</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0147" Visible="true">
+                    <Position>
+                        <X>-292</X>
+                        <Y>-373</Y>
+                    </Position>
+                    <CustomProperties>
+                        <Property Name="object_type" Type="string" Description="">
+                            <string>green</string>
+                        </Property>
+                        <Property Name="path" Type="Item" Description="">Path_0121</Property>
+                        <Property Name="hp" Type="string" Description="">
+                            <string>20</string>
+                        </Property>
+                        <Property Name="range" Type="string" Description="">
+                            <string>350</string>
+                        </Property>
+                        <Property Name="rate" Type="string" Description="">
+                            <string>1.00</string>
+                        </Property>
+                    </CustomProperties>
+                    <Radius>15.5241747</Radius>
+                    <FillColor>
+                        <R>255</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>145</A>
+                        <PackedValue>2449408000</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0148" Visible="true">
+                    <Position>
+                        <X>-27</X>
+                        <Y>-355</Y>
+                    </Position>
+                    <CustomProperties>
+                        <Property Name="object_type" Type="string" Description="">
+                            <string>white</string>
+                        </Property>
+                        <Property Name="path" Type="Item" Description="">Path_0121</Property>
+                        <Property Name="hp" Type="string" Description="">
+                            <string>10</string>
+                        </Property>
+                        <Property Name="range" Type="string" Description="">
+                            <string>200</string>
+                        </Property>
+                        <Property Name="rate" Type="string" Description="">
+                            <string>1.2</string>
+                        </Property>
+                    </CustomProperties>
+                    <Radius>15.5241747</Radius>
+                    <FillColor>
+                        <R>255</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>145</A>
+                        <PackedValue>2449408000</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0149" Visible="true">
+                    <Position>
+                        <X>135</X>
+                        <Y>-252</Y>
+                    </Position>
+                    <CustomProperties>
+                        <Property Name="object_type" Type="string" Description="">
+                            <string>green</string>
+                        </Property>
+                        <Property Name="path" Type="Item" Description="">Path_0121</Property>
+                        <Property Name="hp" Type="string" Description="">
+                            <string>20</string>
+                        </Property>
+                        <Property Name="range" Type="string" Description="">
+                            <string>350</string>
+                        </Property>
+                        <Property Name="rate" Type="string" Description="">
+                            <string>1.00</string>
+                        </Property>
+                    </CustomProperties>
+                    <Radius>15.5241747</Radius>
+                    <FillColor>
+                        <R>255</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>145</A>
+                        <PackedValue>2449408000</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0150" Visible="true">
+                    <Position>
+                        <X>195</X>
+                        <Y>-58</Y>
+                    </Position>
+                    <CustomProperties>
+                        <Property Name="object_type" Type="string" Description="">
+                            <string>blue</string>
+                        </Property>
+                        <Property Name="path" Type="Item" Description="">Path_0121</Property>
+                        <Property Name="hp" Type="string" Description="">
+                            <string>30</string>
+                        </Property>
+                        <Property Name="range" Type="string" Description="">
+                            <string>1000</string>
+                        </Property>
+                        <Property Name="rate" Type="string" Description="">
+                            <string>1.7</string>
+                        </Property>
+                    </CustomProperties>
+                    <Radius>15.5241747</Radius>
+                    <FillColor>
+                        <R>255</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>145</A>
+                        <PackedValue>2449408000</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0151" Visible="true">
+                    <Position>
+                        <X>162</X>
+                        <Y>155</Y>
+                    </Position>
+                    <CustomProperties>
+                        <Property Name="object_type" Type="string" Description="">
+                            <string>white</string>
+                        </Property>
+                        <Property Name="path" Type="Item" Description="">Path_0121</Property>
+                        <Property Name="hp" Type="string" Description="">
+                            <string>10</string>
+                        </Property>
+                        <Property Name="range" Type="string" Description="">
+                            <string>200</string>
+                        </Property>
+                        <Property Name="rate" Type="string" Description="">
+                            <string>1.2</string>
+                        </Property>
+                    </CustomProperties>
+                    <Radius>15.5241747</Radius>
+                    <FillColor>
+                        <R>255</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>145</A>
+                        <PackedValue>2449408000</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0152" Visible="true">
+                    <Position>
+                        <X>206</X>
+                        <Y>351</Y>
+                    </Position>
+                    <CustomProperties>
+                        <Property Name="object_type" Type="string" Description="">
+                            <string>green</string>
+                        </Property>
+                        <Property Name="path" Type="Item" Description="">Path_0121</Property>
+                        <Property Name="hp" Type="string" Description="">
+                            <string>20</string>
+                        </Property>
+                        <Property Name="range" Type="string" Description="">
+                            <string>350</string>
+                        </Property>
+                        <Property Name="rate" Type="string" Description="">
+                            <string>1.0</string>
+                        </Property>
+                    </CustomProperties>
+                    <Radius>15.5241747</Radius>
+                    <FillColor>
+                        <R>255</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>145</A>
+                        <PackedValue>2449408000</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0153" Visible="true">
+                    <Position>
+                        <X>56</X>
+                        <Y>454</Y>
+                    </Position>
+                    <CustomProperties>
+                        <Property Name="object_type" Type="string" Description="">
+                            <string>blue</string>
+                        </Property>
+                        <Property Name="path" Type="Item" Description="">Path_0121</Property>
+                        <Property Name="hp" Type="string" Description="">
+                            <string>30</string>
+                        </Property>
+                        <Property Name="range" Type="string" Description="">
+                            <string>1000</string>
+                        </Property>
+                        <Property Name="rate" Type="string" Description="">
+                            <string>1.7</string>
+                        </Property>
+                    </CustomProperties>
+                    <Radius>15.5241747</Radius>
+                    <FillColor>
+                        <R>255</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>145</A>
+                        <PackedValue>2449408000</PackedValue>
+                    </FillColor>
+                </Item>
+                <Item xsi:type="CircleItem" Name="Circle_0154" Visible="true">
+                    <Position>
+                        <X>-189</X>
+                        <Y>421</Y>
+                    </Position>
+                    <CustomProperties>
+                        <Property Name="object_type" Type="string" Description="">
+                            <string>green</string>
+                        </Property>
+                        <Property Name="path" Type="Item" Description="">Path_0121</Property>
+                        <Property Name="hp" Type="string" Description="">
+                            <string>20</string>
+                        </Property>
+                        <Property Name="range" Type="string" Description="">
+                            <string>350</string>
+                        </Property>
+                        <Property Name="rate" Type="string" Description="">
+                            <string>1.0</string>
+                        </Property>
+                    </CustomProperties>
+                    <Radius>15.5241747</Radius>
+                    <FillColor>
+                        <R>255</R>
+                        <G>0</G>
+                        <B>0</B>
+                        <A>145</A>
+                        <PackedValue>2449408000</PackedValue>
+                    </FillColor>
+                </Item>
+            </Items>
+            <ScrollSpeed>
+                <X>1</X>
+                <Y>1</Y>
+            </ScrollSpeed>
+        </Layer>
+    </Layers>
+    <CustomProperties />
+    <EditorRelated>
+        <NextItemNumber>154</NextItemNumber>
+        <ContentRootFolder>C:\</ContentRootFolder>
+        <CameraPosition>
+            <X>27.0002384</X>
+            <Y>431.666565</Y>
+        </CameraPosition>
+        <Version>1.3.0.0</Version>
+    </EditorRelated>
+</Level>

@@ -1,0 +1,202 @@
+#page, .pages, #level-select, #main-menu{
+	margin: 0;
+	padding: 0;
+}
+
+#level-select p.list a {
+	display: block;
+	border-radius: 10px;
+	/* padding: 10px; */
+	width: 20%;
+	height: 30%;
+	float: left;
+	margin: 0 5% 3% 0;
+	text-align: center;
+	cursor:pointer;
+	/* background-color: #636363; */
+	font-family: 'Macondo Swash Caps', cursive;
+	/* color: white; */
+}
+
+#level-select p.list a img, #level-select p.list a span.score {
+	display: block;
+}
+#level-select p.list a img {
+	height: 100px;
+	width: 100px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 2px solid black;
+}
+
+
+#level-select {
+	/* background-color: #f0e4f0; */
+	width: 100%;
+}
+
+#level-select p.list {
+	margin: 0 10% 0 10%;
+	position: absolute;
+	top: 20%;
+	left: 0;
+	width: 90%;
+	height: 70%;
+}
+
+#level-select p.score-counter {
+	height: 20%;
+	margin: 0 10% 0 10%;	/* 20% */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80%;
+	text-align: left;
+	font-family: 'Macondo Swash Caps', cursive;
+	font-size: 2em;
+	background: url("../art/menu_art/level_select_banner.png") top center no-repeat;
+	background-size:220px 110px;
+}
+
+#level-select p.header {
+	height: 10%;
+	margin: 0 10% 0 10%;	/* 10% */
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+
+div#page {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+/* 	background-color: grey; */
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9000;
+	text-align: center;
+	/* background-color: #636363; */
+	width: 100%;
+}
+
+#main-menu {
+	/* background-color: #636363; */
+	height: 100%;
+	text-align: center;
+}
+#bannerleft {
+	width: 364px;
+	height: 270px;
+	position: fixed;
+	/* bottom: 15%; */
+	top: 260px;
+	left: 7%;
+	background-image: url("../art/menu_art/tutorialbannerleft.png");
+	z-index: 9500;
+}
+
+#bannerright {
+	width: 364px;
+	height: 270px;
+	position: fixed;
+	/* bottom: 15%; */
+	top: 260px;
+	right: 7%;
+	background-image: url("../art/menu_art/tutorialbannerright.png");
+	z-index: 9500;
+}
+
+#main-menu span {
+	font-size: 9em;
+	color: #808080;
+	text-shadow:0px 0px 4px #808080;
+	display: block;
+	font-family: 'Macondo Swash Caps', cursive;
+	text-indent: -9999em;
+	height: 256px;
+	background-image: url("../art/menu_art/banner.png");
+	background-repeat: no-repeat;
+	background-position:center;
+}
+
+body {
+	background-color: #636363;
+	background-image: url("../art/occean_occean_01.png");
+}
+
+#canvas {
+	margin: auto;
+	text-align: center;
+}
+
+button#play {
+	background-image: url("../art/menu_art/play_button.png");
+	background-repeat: no-repeat;
+	background-position:center;
+	width: 256px;
+	height: 128px;
+	background-color: transparent;
+	border: none;
+	text-indent: -9999em;
+}
+button#play:hover {
+	background-image: url("../art/menu_art/play_button_hi.png");
+}
+button#credits {
+	background-image: url("../art/menu_art/credits_button.png");
+	background-repeat: no-repeat;
+	background-position:center;
+	width: 256px;
+	height: 128px;
+	background-color: transparent;
+	border: none;
+	text-indent: -9999em;
+}
+button#credits:hover {
+	background-image: url("../art/menu_art/credits_button_hi.png");
+}
+button.back {
+	background-image: url("../art/menu_art/menu_button.png");
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: 128px 64px;
+	cursor:pointer;
+	width: 128px;
+	height: 64px;
+	background-color: transparent;
+	border: none;
+	text-indent: -9999em;
+}
+button.back:hover {
+	background-image: url("../art/menu_art/menu_button_hi.png");
+}
+
+#credits-list button.back {
+	position: fixed;
+	top: 0;
+	left: 10%;
+}
+#credits-list h2 {
+	color: rgb( 96, 75, 18);
+	font-family: 'Macondo Swash Caps', cursive;
+	text-align: center;
+}
+#credits-list {
+	font-family: 'Macondo Swash Caps', cursive;
+	width: 30%;
+	margin: 0 35% 0 35%;
+	text-align: left;
+}
+
+#credits-list h1 {
+	background: url("../art/menu_art/credits_banner.png") top center no-repeat;
+	background-size: 256px 128px;
+	padding: 0;
+	text-indent: -9999em;
+	width: 100%;
+	height: 128px;
+}

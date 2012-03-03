@@ -1,4 +1,7 @@
-
+/*
+ * flotsam.js
+ * contains most of the game code
+*/
 
 var SCREEN_WIDTH = 800;
 var SCREEN_HEIGHT = 600;
@@ -260,41 +263,28 @@ function LoadCollisFromXML(levelName)
 	var realName = "levels/" + levelName;
 	//var realName = "levels/free_for_all.xml";
 	
-	//alert("Loading " + realName);
 	xmlDoc = loadXMLDoc(realName);
 	if (xmlDoc == null)
 	{
 		alert("BAD LEVEL XML");
 		return;
 	}
-	//alert("xmldoc " + xmlDoc);
 
 	var test = xmlDoc.childNodes;
-	//alert("test len " + test.length);
 	
 	var layerList = xmlDoc.getElementsByTagName("Layer");
-	//alert("layerList " + layerList + " count: " + layerList.length);
 	
 	var itemList = layerList[0].getElementsByTagName("Item");
-	//alert("itemList " + itemList + " count: " + itemList.length);
-	
-	//alert("Placing " + itemList.length + " collision items");
 	
 	//	COLLISION
 	
 	var loopCount = itemList.length;
-	//if (loopCount > 10)
-	//	loopCount = 10;
 	for (var i = 0; i < loopCount /*itemList.length*/; i++)
 	{
-		//alert("subitem " + itemList[i].getAttribute('xsi:type'));
-		
 		var Positions = itemList[i].getElementsByTagName("Position");
-		//alert("Positions " + Positions + " count: " + Positions.length);
 		
 		var xval = Positions[0].getElementsByTagName("X")[0].firstChild.nodeValue;
 		xxval = parseInt(xval);
-		//alert("xxval " + xxval + " " + typeof(xxval));
 		
 		var yval = Positions[0].getElementsByTagName("Y")[0].firstChild.nodeValue;
 		yyval = parseInt(yval);
@@ -310,8 +300,6 @@ function LoadCollisFromXML(levelName)
 		{
 			var width = parseInt(itemList[i].getElementsByTagName("Width")[0].firstChild.nodeValue);
 			var height = parseInt(itemList[i].getElementsByTagName("Height")[0].firstChild.nodeValue);
-			
-			//alert("xywh: (" + xxval + "," + yyval + ") " + width + "x" + height);
 			
 			fixDef.shape = new b2PolygonShape;
 			fixDef.shape.SetAsBox(width/gPhysScale/2, height/gPhysScale/2);
@@ -340,7 +328,6 @@ function LoadCollisFromXML(levelName)
 			
 			world.CreateBody(bodyDef).CreateFixture(fixDef);
 			
-			//alert(": " + i + " xyr: (" + xxval + "," + yyval + ") " + radius);
 		} else {
 			alert("BOGUS COLLIS ITEM!");
 		}
@@ -352,21 +339,14 @@ function LoadCollisFromXML(levelName)
 	
 	var itemList = layerList[1].getElementsByTagName("Item");
 	
-	//alert("graphics itemList " + itemList + " count: " + itemList.length);
-	
 	var loopEnd = itemList.length;
-	//if (loopEnd > 1)
-	//	loopEnd = 1;
+
 	for (var i = 0; i < loopEnd; i++)
 	{
-		//alert("subitem " + itemList[i].getAttribute('xsi:type'));
-		
 		var Positions = itemList[i].getElementsByTagName("Position");
-		//alert("Positions " + Positions + " count: " + Positions.length);
 		
 		var xval = Positions[0].getElementsByTagName("X")[0].firstChild.nodeValue;
 		var xxval = parseInt(xval);
-		//alert("xxval " + xxval + " " + typeof(xxval));
 		
 		var yval = Positions[0].getElementsByTagName("Y")[0].firstChild.nodeValue;
 		var yyval = parseInt(yval);
@@ -374,12 +354,9 @@ function LoadCollisFromXML(levelName)
 		var rotation = parseFloat(itemList[i].getElementsByTagName("Rotation")[0].firstChild.nodeValue);
 		
 		var Scales = itemList[i].getElementsByTagName("Scale");
-		//alert("Scales " + Positions + " count: " + Scales.length);
 		
 		var prexscale = Scales[0].getElementsByTagName("X")[0].firstChild.nodeValue;
-		//alert("prexscale " + prexscale + " is " + typeof(prexscale));
 		var xscale = parseFloat(prexscale);
-		//alert("xscale " + xscale);
 		
 		var yscale = parseFloat(Scales[0].getElementsByTagName("Y")[0].firstChild.nodeValue);
 		
@@ -389,12 +366,10 @@ function LoadCollisFromXML(levelName)
 		} else if (itemList[i].getAttribute('xsi:type') == "TextureItem")
 		{
 			var imageAsset = itemList[i].getElementsByTagName("texture_filename")[0].firstChild.nodeValue;
-			//alert("image " + imageAsset);
 			var pointer = imageAsset.lastIndexOf('\\');
-			//alert("pointer " + pointer);
+
 			imageAsset = imageAsset.slice(pointer+1, imageAsset.length);
 			imageAsset = "art/" + imageAsset;
-			//alert("edited image " + imageAsset + " xs: " + xscale + " ys: " + yscale);
 		
 			thing = new Object;
 			initThing(thing);
@@ -411,8 +386,6 @@ function LoadCollisFromXML(levelName)
 			thing.sprite.image = new Image();
 			thing.sprite.image.src = imageAsset;//new String(imageAsset);
 			
-			//alert("image : " + imageAsset + " at(" + xxval + "," + yyval + ") (" + xscale + "x" + yscale + ")");
-			
 			gThings[gThings.length] = thing;
 			
 		} else {
@@ -425,26 +398,19 @@ function LoadCollisFromXML(levelName)
 	//	OBJECTS
 	var itemList = layerList[2].getElementsByTagName("Item");
 	
-	//alert("objects itemList " + itemList + " count: " + itemList.length);
 	
 	var loopEnd = itemList.length;
-	//if (loopEnd > 1)
-	//	loopEnd = 1;
 	for (var i = 0; i < loopEnd; i++)
 	{
-		//alert("subitem " + itemList[i].getAttribute('xsi:type'));
 		
 		var Positions = itemList[i].getElementsByTagName("Position");
-		//alert("Positions " + Positions + " count: " + Positions.length);
 		
 		var xval = Positions[0].getElementsByTagName("X")[0].firstChild.nodeValue;
 		xxval = parseInt(xval);
-		//alert("xxval " + xxval + " " + typeof(xxval));
 		
 		var yval = Positions[0].getElementsByTagName("Y")[0].firstChild.nodeValue;
 		yyval = parseInt(yval);
 		
-		//var rotation = parseFloat(itemList[i].getElementsByTagName("Rotation")[0].firstChild.nodeValue);
 		
 		if (itemList[i].getAttribute('xsi:type') == "PathItem")
 		{
@@ -464,33 +430,27 @@ function LoadCollisFromXML(levelName)
 			
 			for (var pIndex = 0; pIndex < Properties.length; pIndex++)
 			{
-				//var yeek = Properties[pIndex].getAttribute('Name');
-				//alert(": " + pIndex + " yeek " + yeek);
 				
 				if (Properties[pIndex].getAttribute('Name') == "hp")
 				{
 					var theStrings = Properties[pIndex].getElementsByTagName("string");
 					if (theStrings != undefined && theStrings.length > 0)
 						hp = parseInt(theStrings[0].firstChild.nodeValue);
-					//alert("hp " + hp);
 				} else if (Properties[pIndex].getAttribute('Name') == "range")
 				{
 					var theStrings = Properties[pIndex].getElementsByTagName("string");
 					if (theStrings != undefined && theStrings.length > 0)
 						range = parseInt(theStrings[0].firstChild.nodeValue);
-					//alert("range " + range);
 				} else if (Properties[pIndex].getAttribute('Name') == "rate")
 				{
 					var theStrings = Properties[pIndex].getElementsByTagName("string");
 					if (theStrings != undefined && theStrings.length > 0)
 						rate = parseFloat(theStrings[0].firstChild.nodeValue);
-					//alert("rate " + rate);
 				} else if (Properties[pIndex].getAttribute('Name') == "object_type")
 				{
 					var theStrings = Properties[pIndex].getElementsByTagName("string");
 					if (theStrings != undefined && theStrings.length > 0)
 						shipClass = theStrings[0].firstChild.nodeValue;
-					//alert("rate " + rate);
 				}
 			}
 
@@ -500,27 +460,7 @@ function LoadCollisFromXML(levelName)
 			alert("BOGUS OBJECT ITEM!");
 		}
 	}
-	
-	//alert("Done reading level.");
-	
-	/*
-	var layerList = topLevel.getElementsByTagName("Layers");
-	for (var i = 0; i < laye
-	rList.length; i++)
-	{
-		var itemList = layerList.getElementsByTagName("Item");
-		alert("item");
-	}
-	*/
-	
-	//alert("OK = " + topLevel.nodeName);	//	value is complex (doc)
-	
-	//var sList = topLevel.childNodes;	//	includes funky text nodes, so be careful with counting these
-	//var count = 0;
-	//for (var i = 0; i < sList.length; i++)
-	//{
-		//if (sList[i].nodeType != 1)	//	skip bogus nodes like text nodes
-			//continue;
+
 }
 
 function CreateBadguy(posx, posy, radius, hp, range, rate, strength, shipClass)
@@ -566,11 +506,6 @@ function CreateBadguy(posx, posy, radius, hp, range, rate, strength, shipClass)
 			new b2Vec2(-S, -0.35 * S)
 		);
 		fixDef.shape.SetAsArray(verts, verts.length);
-		
-	//	fixDef.shape.SetAsBox(
-	//		Math.random() + 0.1 //half width
-	//		,  Math.random() + 0.1 //half height
-	//	);
 	
 	} else {
 		fixDef.shape = new b2CircleShape(
@@ -592,8 +527,6 @@ function CreateBadguy(posx, posy, radius, hp, range, rate, strength, shipClass)
 	thing.angle = 0;
 	
 	thing.typeID = OBJECT_BADGUY;
-	
-	//alert("shipClass " + shipClass + " : " + shipClassOffset);
 	
 	if (shipClass.substr(0, 3) == "art")	//	assume this is an asset
 	{
@@ -617,7 +550,6 @@ function CreateBadguy(posx, posy, radius, hp, range, rate, strength, shipClass)
 	thing.range = range;
 	thing.strength = strength;
 	
-	//alert("pos " + thing.pos.x + ", " + thing.pos.y);
 	gThings[gThings.length] = thing;
 }
 
@@ -640,7 +572,6 @@ function CreateEffect(posx, posy, graphicIndex, time)
 	if (graphicIndex == GRAPHIC_FIRE)
 		thing.autoRoll = Math.random() * Math.PI;
 	
-	//alert("pos " + thing.pos.x + ", " + thing.pos.y);
 	gThings[gThings.length] = thing;
 }
 
@@ -658,8 +589,6 @@ function init(levelName) {
 
 	document.addEventListener('keydown',onKeyDown,true);
 	document.addEventListener('keyup',onKeyUp,true);
-	//document.onKeyUp = "onKeyUp()";
-	//document.onKeyDown = "onKeyDown()";
 	
 	InitSound();
 
@@ -683,108 +612,17 @@ function init(levelName) {
 
 	var bodyDef = new b2BodyDef;
 	
-	/*
-	//create ground
-	bodyDef.type = b2Body.b2_staticBody;
-	bodyDef.position.x = 10;
-	bodyDef.position.y = 12.9;
-	fixDef.shape = new b2PolygonShape;
-	fixDef.shape.SetAsBox(10, 0.5);
-	world.CreateBody(bodyDef).CreateFixture(fixDef);
-
-	//	walls
-	bodyDef.type = b2Body.b2_staticBody;
-	bodyDef.position.x = 0;
-	bodyDef.position.y = 5;
-	fixDef.shape = new b2PolygonShape;
-	fixDef.shape.SetAsBox(0.5, 10);
-	world.CreateBody(bodyDef).CreateFixture(fixDef);
-
-	//	walls
-	bodyDef.type = b2Body.b2_staticBody;
-	bodyDef.position.x = 20;
-	bodyDef.position.y = 5;
-	fixDef.shape = new b2PolygonShape;
-	fixDef.shape.SetAsBox(0.5, 10);
-	world.CreateBody(bodyDef).CreateFixture(fixDef);
-
-	//	ceiling
-	bodyDef.type = b2Body.b2_staticBody;
-	bodyDef.position.x = 10;
-	bodyDef.position.y = 0;
-	fixDef.shape = new b2PolygonShape;
-	fixDef.shape.SetAsBox(10, 0.5);
-	world.CreateBody(bodyDef).CreateFixture(fixDef);
-	*/
-	
 	//	new test
 	LoadCollisFromXML(levelName);
 
 	//create some objects
 	bodyDef.type = b2Body.b2_dynamicBody;
-	for(var i = 0; i < 2; ++i) {
-	
-	/*
-		var thing = new Object;
-		initThing(thing);
-		thing.name = "badguy" + i;
-		
-		if (1)//(Math.random() > 0.5)
-		{
-			var PTM_RATIO = 2;
-			fixDef.shape = new b2PolygonShape;
-			var S = 1.1;
-			var verts = new Array(
-				new b2Vec2(0, -S),
-				new b2Vec2(S, -0.35 * S),
-				new b2Vec2(0.5 * S, 0.6 * S),
-				new b2Vec2(-0.5 * S, 0.6 * S),
-				new b2Vec2(-S, -0.35 * S)
-			);
-			fixDef.shape.SetAsArray(verts, verts.length);
-			
-		//	fixDef.shape.SetAsBox(
-		//		Math.random() + 0.1 //half width
-		//		,  Math.random() + 0.1 //half height
-		//	);
-		
-		} else {
-			fixDef.shape = new b2CircleShape(
-				0.05 //radius
-			);
-		}
-		
-		fixDef.filter.categoryBits = COLLIS_BADGUY;
-		fixDef.filter.maskBits = COLLIS_WORLD | COLLIS_HERO;
-		
-		bodyDef.position.x = Math.random() * 20;
-		bodyDef.position.y = Math.random() * 10;
-		
-		bodyDef.userData = thing;
-		
-		thing.body = world.CreateBody(bodyDef);
-		thing.body.CreateFixture(fixDef);	//	what does this do?
-		thing.pos = new RVector(bodyDef.position.x * gPhysScale, bodyDef.position.y * gPhysScale);
-		thing.angle = 0;
-		
-		thing.typeID = OBJECT_BADGUY;
-		thing.sprite = gThingSprites[GRAPHIC_BADGUY];
-		
-		thing.cooldown = 0;
-		
-		//alert("pos " + thing.pos.x + ", " + thing.pos.y);
-		gThings[gThings.length] = thing;
-		*/
-		
-	}
-	
 	//	hero
 	var thing = new Object;
 	initThing(thing);
 	thing.name = "hero";
 	
 	fixDef.shape = new b2PolygonShape;
-	//fixDef.shape.SetAsBox(1, 1);
 	if (0) {
 		var S = 0.8;
 		var verts = new Array(
@@ -803,9 +641,6 @@ function init(levelName) {
 	}
 	
 	bodyDef.userData = thing;
-	//bodyDef.position.x = Math.random() * 10;
-	//bodyDef.position.y = Math.random() * 10;
-	//bodyDef.position.y = Math.random() * 10;
 	
 	bodyDef.position.x = 0;
 	bodyDef.position.y = 0;
@@ -919,8 +754,6 @@ function CreatePickup(x, y)
 	thing.typeID = OBJECT_PICKUP;
 	thing.sprite = gThingSprites[GRAPHIC_PICKUP_CANNON];
 	
-	//alert("image : " + imageAsset + " at(" + xxval + "," + yyval + ") (" + xscale + "x" + yscale + ")");
-	
 	gThings[gThings.length] = thing;
 }
 
@@ -977,9 +810,6 @@ function UpdateAndKillDeadThings()
 	{
 		if (gThings[thingIndex].damageThisTurn > 0)
 		{
-			//	debug:
-			//if (gThings[thingIndex].damageThisTurn > 10)
-			//	alert("dmg " + gThings[thingIndex].damageThisTurn);
 			
 			gThings[thingIndex].health -= gThings[thingIndex].damageThisTurn;
 			gThings[thingIndex].damageThisTurn = 0;
@@ -1072,20 +902,9 @@ function updateThingPositions()
 	var myVec = new RVector;
 	myVec.x = curVec.x;
 	myVec.y = curVec.y;
-	//if (myVec.length > 1)
-	//{
-		gHero.angle = Math.atan2(myVec.x, -myVec.y);
-		/*
-		gHero.targetAngle = Math.atan2(myVec.x, -myVec.y);
-		var theTarget = gHero.targetAngle;
-		if (theTarget < 0)
-			theTarget += Math.PI;
-		if (gHero.angle > theTarget)
-			gHero.angle -= Math.PI/10;
-		else if (gHero.angle < theTarget)
-			gHero.angle += Math.PI/10;
-		*/
-	//}
+
+	gHero.angle = Math.atan2(myVec.x, -myVec.y);
+
 }
 
 var MAX_ADDONS = 16;
@@ -1110,10 +929,6 @@ function DrawExtraHeroStuff()
 	for (var i = 0; i < gHero.addons.length; i++)
 	{
 		var relPos = GetAddonPos(i);
-		
-		//alert("relpos " + relPos.x + relPos.y);
-		
-		//gHero.addons[i]
 		
 		ctx.save();
 		
@@ -1158,22 +973,12 @@ function drawstuff()
 					gThings[i].yscale * gThings[i].sprite.scale);
 		ctx.rotate(gThings[i].angle);
 		
-		//ctx.fillStyle="#AAFFA0";
-		
-		//ctx.beginPath();
-		////ctx.arc(gThings[i].pos.x, gThings[i].pos.y, radius, 0, Math.PI * 2, true);
-		//ctx.arc(0, 0, radius, 0, Math.PI * 2, true);
-		//ctx.closePath();
-		//ctx.fill();
-		
 		if (gThings[i].sprite == gThingSprites[GRAPHIC_HERO1])
 		{
 			var spriteIndex = GRAPHIC_HERO1 + gThings[i].frame;
 			var sprite = gThingSprites[spriteIndex];
 			ctx.drawImage(sprite.image, -sprite.image.width /2, -sprite.image.height /2);
 		} else {	//	normal
-			//ctx.drawImage(gThings[i].sprite.image, -radius, -radius);
-			//ctx.drawImage(gThings[i].sprite.image, -gThings[i].sprite.image.width * gThings[i].xscale /2, -gThings[i].sprite.image.height * gThings[i].yscale /2);
 			ctx.drawImage(gThings[i].sprite.image, -gThings[i].sprite.image.width /2, -gThings[i].sprite.image.height /2);
 		}
 		
@@ -1183,6 +988,8 @@ function drawstuff()
 		ctx.restore();
 	}
 	
+	//used for testing
+	//can drain CPU
 	//world.DrawDebugData();
 	
 	ctx.restore();
@@ -1207,29 +1014,6 @@ function drawstuff()
 	ctx.fillStyle = "#204080";
 	ctx.font = "bold 12px monospace";
 	ctx.fillText("fps: " + dispFps + "  gdt: " + dispDT, 30, SCREEN_HEIGHT - 10);
-	
-	//ctx.fillStyle = "#204080";
-	//ctx.font = "bold 12px monospace";
-	
-	//ctx.fillText("gDebug1: " + gDebug1 + "  gDebug2: " + gDebug2, 30, SCREEN_HEIGHT - 20);
-	
-	/*
-	var lineText = "KEYS ";
-	var keyCode;
-	keyCode = "W".charCodeAt();
-	if (gKeyboardState[keyCode] == true)
-		lineText += "W";
-	keyCode = "A".charCodeAt();
-	if (gKeyboardState[keyCode] == true)
-		lineText += "A";
-	keyCode = "S".charCodeAt();
-	if (gKeyboardState[keyCode] == true)
-		lineText += "S";
-	keyCode = "D".charCodeAt();
-	if (gKeyboardState[keyCode] == true)
-		lineText += "D";
-	ctx.fillText(lineText, 30, SCREEN_HEIGHT - 50);
-	*/
 	
 	if (fameDisplayCounter > 0)
 	{
@@ -1266,9 +1050,6 @@ function drawother()
 function drawending()
 {
 	ctx = document.getElementById("canvas").getContext("2d");
-
-	//ctx.fillStyle = "#6040FF";
-	//ctx.fillRect(0, 0, 20, 20);
 
 	ctx.drawImage(endingSprite, SCREEN_WIDTH/2 -endingSprite.width /2, SCREEN_HEIGHT/2 -endingSprite.height /2);
 
@@ -1514,49 +1295,6 @@ function KillNukeList()
 		}
 	}
 	
-/*	CRAP
-	gNukeList.sort();	//	let's hope this works...
-*/
-	//	remove duplicates
-	//	todo might not need this, since we check the thing list below...?
-	/*
-	for (var i = gNukeList.length-1; i >= 1; i--)
-	{
-		if (gNukeList[i] == gNukeList[i-1])
-		{
-			gNukeList.splice(i, 1);	//	remove this item
-		}
-	}
-	*/
-
-	/*
-	//	now kill them
-	for (var thingIndex = gThings.length-1; thingIndex >= 0; thingIndex--)
-	{
-		for (var j = 0; j < gNukeList.length; j++)
-		{
-			if (gNukeList[j] == gThings[thingIndex])
-			{
-				//	kill the object!
-				KillThing(gThings[thingIndex]);
-				
-				gThings.splice(thingIndex, 1);
-				break;
-			}
-		}
-	}
-
-	//	clear nuke list
-	gNukeList.splice(0, gNukeList.length);
-	
-	for (var thingIndex = gThings.length-1; thingIndex >= 0; thingIndex--)
-	{
-		if (gThings[thingIndex].toNuke)
-		{
-			alert("HEY!");
-		}
-	}
-	*/
 }
 
 
@@ -1717,38 +1455,6 @@ function onClick(e)
 	
 	fireAt(pos);
 	
-	//alert("mouse click");
-	
-	//	find nearby thing to send flying...
-	/*
-	for (var i = 0; i < gThings.length; i++)
-	{
-		var delta = pos.copy();
-		delta.subtract(gThings[i].pos);
-		
-		if (delta.length() < 34)
-		{
-
-			var	vec = new Box2D.Common.Math.b2Vec2;
-			var ipos;// = new Box2D.Common.Math.b2Vec2;	//GetPosition
-			//vec.x = 0;//(Math.random() * 2 - 1) * 200.2;
-			//vec.y = -50;//(Math.random() * 1 + 1) * 200.2;
-			ipos = gThings[i].body.GetWorldCenter();
-			delta.normalize();
-			vec.x = -delta.x * 100;
-			vec.y = -delta.y * 100;
-			delta.scale(0.5);
-			ipos.x += delta.x;
-			ipos.y += delta.y;
-			//ipos.x = pos.x / gPhysScale;
-			//ipos.y = pos.y / gPhysScale;
-
-			gThings[i].body.ApplyImpulse(vec, ipos);
-		
-			return;
-		}
-	}
-	*/
 }
 
 function onMouseMove(e)
@@ -1760,11 +1466,6 @@ function onMouseMove(e)
 
 function onKeyDown(e)
 {
-	//var Key;
-	//if (document.layers)
-      //  Key = e.which;
-    //else
-      //  Key = window.event.keyCode;
 	
 	var theCode = e.keyCode;
 	
@@ -1789,19 +1490,12 @@ function onKeyDown(e)
 
 function onKeyUp(e)
 {
-	//var Key;
-	//if (document.layers)
-      //  Key = e.which;
-    //else
-      //  Key = window.event.keyCode;
 		
 	var theCode = e.keyCode;
 	
 	if (theCode < KEYBOARD_STATE_ARRAY_SIZE)
 		gKeyboardState[theCode] = false;
-		
-	//if (theCode == 66)
-		//alert("!B");
+
 }
 
 function Damage(thing)
@@ -1827,25 +1521,6 @@ function postSolve(contact, impulse)
 	var thingA = bodyA.GetUserData();
 	var thingB = bodyB.GetUserData();
 	
-	//	kill all bullets that hit anything, for now...
-	//	check if this bullet is already planned to be nuked, and if so, don't process again (to avoid double damage)
-	//	will that cover enough issues?
-	
-	/*
-	if (thingA != undefined && thingA.typeID == OBJECT_BULLET && thingA.toNuke != true)
-	{
-		thingA.toNuke = true;
-		//gNukeList[nukeList.length] = thingA;
-		Damage(thingB, 10);
-	}
-	if (thingB != undefined && thingB.typeID == OBJECT_BULLET && thingB.toNuke != true)
-	{
-		thingB.toNuke = true;
-		//gNukeList[nukeList.length] = thingB;
-		Damage(thingA, 10);
-	}
-	*/
-	
 	//	cleaner version
 	
 	var hitter;
@@ -1865,7 +1540,6 @@ function postSolve(contact, impulse)
 	if (hitter != undefined)
 	{
 		hitter.toNuke = true;	//	kill ball
-		//gNukeList[nukeList.length] = hitter;
 		
 		if (victim != undefined)
 		{
@@ -1873,13 +1547,10 @@ function postSolve(contact, impulse)
 			
 			if (victim.typeID == OBJECT_BADGUY || victim.typeID == OBJECT_HERO)
 				CreateEffect(hitter.pos.x, hitter.pos.y, GRAPHIC_EXPLOSION, 0.5);
-			//else //if (victim.typeID == OBJECT_WORLD)
-				//CreateEffect(hitter.pos.x, hitter.pos.y, GRAPHIC_SPLASH, 0.3);	//	puff would be better
 		} else {
 			//	hit wall?
 			CreateEffect(hitter.pos.x, hitter.pos.y, GRAPHIC_SPLASH, 0.3);	//	puff would be better
 		}
 	}
 	
-	//alert("hit " + thingA + " + " + thingB.name);
 }

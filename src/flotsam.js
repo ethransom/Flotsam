@@ -12,7 +12,7 @@ var INIT_HERO_HEALTH = 50;
 var INIT_LEVEL_TIME = 45;
 
 var GAME_STATE_PLAYING = 0;
-var GAME_STATE_LEVEL_SELECT = 1;
+var GAME_STATE_LEVEL_SELECT = 1; 
 var GAME_STATE_END_SCREEN = 2;
 var GAME_STATE_PAUSED = 3;
 
@@ -1668,8 +1668,21 @@ function update()
 	}
 	
 	if ( gGameState != GAME_STATE_PAUSED ) 
-		window.setTimeout( update, 1000/60 );
+		window.requestAnimFrame( update );
 }
+
+//provides pollyfill for requestAnimationFrame
+// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+window.requestAnimFrame = (function(){
+  return  window.requestAnimationFrame       || 
+		  window.webkitRequestAnimationFrame || 
+		  window.mozRequestAnimationFrame    || 
+		  window.oRequestAnimationFrame      || 
+		  window.msRequestAnimationFrame     || 
+		  function( callback ){
+			window.setTimeout(callback, 1000 / 60);
+		  };
+})();
 
 //http://answers.oreilly.com/topic/1929-how-to-use-the-canvas-and-draw-elements-in-html5/
 //http://developer.appcelerator.com/question/55121/html5-canvas-drawing-in-webview

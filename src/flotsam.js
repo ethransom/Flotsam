@@ -575,6 +575,15 @@ function CreateEffect(posx, posy, graphicIndex, time)
 	gThings[gThings.length] = thing;
 }
 
+// cleanly shuts down the game
+function uninit() {
+	gThingSprites = new Array;
+	var gThings = new Array;
+	var gHero = null;
+
+	pauseGame();
+}
+
 // starts the game, given a level name
 function init(levelName) {
 

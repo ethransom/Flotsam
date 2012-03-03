@@ -37,7 +37,6 @@ var PICKUP_DISTANCE = 60;	//	how close before you can pick up a pickup
 var fameDisplayCounter = 0;
 var fameDisplay;
 
-//var gGameState = GAME_STATE_LEVEL_SELECT;	//	todo fix this
 var gGameState = GAME_STATE_PLAYING;	//	todo fix this
 
 var world;	//	box2d world!
@@ -255,6 +254,7 @@ function initThing(thing)
 	thing.autoroll = 0;
 }
 
+// Parses level XML
 function LoadCollisFromXML(levelName)
 {
 	//var levelName = "levels/test_level.xml";
@@ -575,6 +575,7 @@ function CreateEffect(posx, posy, graphicIndex, time)
 	gThings[gThings.length] = thing;
 }
 
+// starts the game, given a level name
 function init(levelName) {
 
 	gHudScore = 0;
@@ -880,7 +881,7 @@ function UpdateAndKillDeadThings()
 	}
 }
 
-
+// Synchronize box2d positions with visual layer positions?
 function updateThingPositions()
 {
 	for (var i = 0; i < gThings.length; i++)
@@ -922,7 +923,7 @@ function GetAddonPos(cIndex)
 	return newPos;
 }
 
-//	everything's already in the right transform state here...
+// Draw the hero's addons?
 function DrawExtraHeroStuff()
 {
 	
@@ -1039,14 +1040,6 @@ function drawstuff()
 	ctx.stroke();
 }
 
-function drawother()
-{
-	ctx = document.getElementById("canvas").getContext("2d");
-
-	ctx.fillStyle = "#FFFF30";
-	ctx.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-}
-
 function drawending()
 {
 	ctx = document.getElementById("canvas").getContext("2d");
@@ -1150,7 +1143,6 @@ function CreateBullet(sourceAngle, sourceX, sourceY, targetX, targetY, baseVeloc
 	
 	thing.lifeCounter = shotLife;	//	in seconds
 	
-	//alert("pos " + thing.pos.x + ", " + thing.pos.y);
 	gThings[gThings.length] = thing;
 }
 
@@ -1196,6 +1188,7 @@ function fireAt(screenPos)
 	}
 }
 
+// Fires bullet from pirates at ship
 function BadGuyFireAt(ship, targetPos)
 {
 	if (ship.cooldown <= 0)
@@ -1214,7 +1207,7 @@ function BadGuyFireAt(ship, targetPos)
 
 //
 //	handle controls
-//
+// TODO: extract to module
 function handlekeys()
 {
 	//var charCode = String.fromCharCode(theCode);	//	need to reverse this search for this and itoa atoi I remember something...
@@ -1297,7 +1290,7 @@ function KillNukeList()
 	
 }
 
-
+// Main game loop
 function updateGame() {
 
 	gHudLevelTime -= gDT;
@@ -1323,11 +1316,13 @@ function updateGame() {
 		}
 	}
 	
+	// Create hero's fire effects
 	if (Math.floor(Math.random() * 10) == 0)
 	{
 		CreateEffect(gHero.pos.x - 30 + Math.random() * 60, gHero.pos.y - 30 + Math.random() * 60, GRAPHIC_FIRE, 0.5);
 	}
 	
+	//animate hero
 	gHero.frameCounter -= gDT;
 	if (gHero.frameCounter < 0)
 	{
@@ -1389,7 +1384,7 @@ function unpauseGame() {
 	update();	//restart game loop
 }
 
-
+// Main loop is here
 function update()
 {
 	if (gGameState == GAME_STATE_PLAYING)
@@ -1397,8 +1392,6 @@ function update()
 		
 	if (gGameState == GAME_STATE_PLAYING)
 		drawstuff();
-	else if (gGameState == GAME_STATE_LEVEL_SELECT)
-		drawother();
 	else if (gGameState == GAME_STATE_END_SCREEN)
 	{
 		drawstuff();
@@ -1464,6 +1457,7 @@ function onMouseMove(e)
 	//gActiveGame.mouseMove(pos);	
 }
 
+// Event handler for keydown event
 function onKeyDown(e)
 {
 	

@@ -22,6 +22,10 @@ function page(name) {
 	if(name=="main") {
 		PlayBackgroundSound('light');
 	}
+	
+	if(name=="canvas") {
+		PlayBackgroundSound('song');
+	}
 
 	if (name) {
 		$($page).append(	$(pages[name]).fadeIn('fast')	).fadeIn('fast');
@@ -72,4 +76,6 @@ window.onload = function() {
 		page();
 		page('main');
 	});
+	
+	InitSound();
 };

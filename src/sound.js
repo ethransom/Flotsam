@@ -65,7 +65,6 @@ function InitSound()
 		}
 	}
 	
-	PlayBackgroundSound('song');
 }
 
 //	Play sound.

@@ -580,6 +580,7 @@ function uninit() {
 	gThingSprites = new Array;
 	var gThings = new Array;
 	var gHero = null;
+	world = null;
 
 	pauseGame();
 }
@@ -599,8 +600,6 @@ function init(levelName) {
 
 	document.addEventListener('keydown',onKeyDown,true);
 	document.addEventListener('keyup',onKeyUp,true);
-	
-	InitSound();
 
 	initsprites();
 
@@ -1306,8 +1305,15 @@ function updateGame() {
 	
 	if (gHudLevelTime <= 0)
 	{
+		if( gGameState != GAME_STATE_END_SCREEN) {
+			console.log('first game thingy');
+			// first frame with game over
+			setTimeout( gameOver, 2000 );
+		}
+		
 		gHudLevelTime = 0;
 		gGameState = GAME_STATE_END_SCREEN;
+		
 	}
 	
 	if (fameDisplayCounter > 0)
@@ -1556,4 +1562,12 @@ function postSolve(contact, impulse)
 		}
 	}
 	
+}
+
+function gameOver() {
+	uninit();
+	
+	page('choose-level');
+	
+	PlayBackgroundSound('light');
 }

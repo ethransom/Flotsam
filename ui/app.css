@@ -1,4 +1,4 @@
-#page, .pages, #level-select, #main-menu{
+#page, .pages, #level-select, #main-menu, #load-wrapper {
 	margin: 0;
 	padding: 0;
 }
@@ -71,8 +71,6 @@
 div#page {
 	padding: 0;
 	margin: 0;
-	width: 100%;
-	height: 100%;
 /* 	background-color: grey; */
 	position: absolute;
 	top: 0;
@@ -81,6 +79,7 @@ div#page {
 	text-align: center;
 	/* background-color: #636363; */
 	width: 100%;
+	height: 100%;
 }
 
 #main-menu {
@@ -199,4 +198,22 @@ button.back:hover {
 	text-indent: -9999em;
 	width: 100%;
 	height: 128px;
+}
+
+#load-wrapper {
+	border: 2px solid #33281E;
+	background-color: #33281E;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	/* negative half of the content */
+	margin-top: -10px;
+	margin-left: -150px;
+	width: 300px;
+	height: 20px;
+}
+
+#load-wrapper div { 
+	background-color: #E3A81E;
+	height: 20px;
 }

@@ -117,9 +117,10 @@ function LoadCollisFromXML(levelName)
 			thing.typeID = OBJECT_WORLD_GRAPHIC;
 			thing.sprite = new Object;
 			thing.sprite.scale = 1.0;
-			thing.sprite.image = new Image();
-			thing.sprite.image.src = imageAsset;//new String(imageAsset);
-			
+
+			thing.sprite.image = Preloader.asset('images', imageAsset);
+
+
 			gThings[gThings.length] = thing;
 			
 		} else {

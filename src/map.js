@@ -1,29 +1,22 @@
 // Parses level XML
 function LoadCollisFromXML(levelName)
 {
-	//var levelName = "levels/test_level.xml";
-	//if (!isNaN(levelNum))
-	//	levelName = "levels/" + levels[levelNum].map;
 	var realName = "levels/" + levelName;
-	//var realName = "levels/free_for_all.xml";
 	
 	xmlDoc = loadXMLDoc(realName);
 	if (xmlDoc == null)
 	{
-		alert("BAD LEVEL XML");
+		alert("Failed to load level data!");
 		return;
 	}
 
-	var test = xmlDoc.childNodes;
-	
 	var layerList = xmlDoc.getElementsByTagName("Layer");
 	
 	var itemList = layerList[0].getElementsByTagName("Item");
 	
-	//	COLLISION
+	// Load Collision Layer
 	
-	var loopCount = itemList.length;
-	for (var i = 0; i < loopCount /*itemList.length*/; i++)
+	for (var i = 0; i < itemList.length; i++)
 	{
 		var Positions = itemList[i].getElementsByTagName("Position");
 		
@@ -76,16 +69,13 @@ function LoadCollisFromXML(levelName)
 			alert("BOGUS COLLIS ITEM!");
 		}
 		
-		//itemList[i]
 	}
 	
-	//	GRAPHICS
+	// Load Graphics Layer
 	
 	var itemList = layerList[1].getElementsByTagName("Item");
 	
-	var loopEnd = itemList.length;
-
-	for (var i = 0; i < loopEnd; i++)
+	for (var i = 0; i < itemList.length; i++)
 	{
 		var Positions = itemList[i].getElementsByTagName("Position");
 		
@@ -136,15 +126,13 @@ function LoadCollisFromXML(levelName)
 			alert("BOGUS GRAPHICS ITEM!");
 		}
 		
-		//itemList[i]
 	}
 	
-	//	OBJECTS
+	// Load Object Layer
 	var itemList = layerList[2].getElementsByTagName("Item");
 	
 	
-	var loopEnd = itemList.length;
-	for (var i = 0; i < loopEnd; i++)
+	for (var i = 0; i < itemList.length; i++)
 	{
 		
 		var Positions = itemList[i].getElementsByTagName("Position");

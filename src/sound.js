@@ -105,11 +105,11 @@ function InitBGSounds() {
 InitBGSounds();
 
 function PlayBackgroundSound(id) {
- 	/*for (var key in bgSounds) {
+ 	for (var key in bgSounds) {
 		console.log( key );
 		bgSounds[key].pause();
 		bgSounds[key].currentTime = 0;
 	} 
 	console.log(bgSounds[id]);
-	bgSounds[id].play();*/
+	bgSounds[id].play();
 }

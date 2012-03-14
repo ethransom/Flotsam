@@ -37,9 +37,9 @@ var sounds = {
 };
 
 var bgSounds = {
-	'song': "audio/musical_dongxi/goblinTheme.wav",
-	'rap': "audio/musical_dongxi/rap_better.wav",
-	'light': "audio/musical_dongxi/lighthearty.wav"
+	'song': "audio/musical_dongxi/goblinTheme",
+	'rap': "audio/musical_dongxi/rap_better",
+	'light': "audio/musical_dongxi/lighthearty"
 };
 
 var gHitSoundPlaying = false;
@@ -94,7 +94,7 @@ function InitBGSounds() {
 	
 	for (var key in bgSounds) {
 		var s = bgSounds[key];
-		bgSounds[key] = Preloader.asset('sounds',s);
+		bgSounds[key] = Preloader.asset('ogg-sounds',s);
 		bgSounds[key].loop = true;
  		bgSounds[key].addEventListener('ended', function(){
 			this.currentTime = 0;

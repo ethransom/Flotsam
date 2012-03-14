@@ -1,37 +1,10 @@
-function load_level(num) {
+function load_level(level) {
 	page('canvas');
-	//alert("init " + num);
-	init(num);
-}
-var $page = null;
 
-var pages = {
-	'choose-level': '#level-select',
-	'main': '#main-menu',
-	'credits': '#credits-list',
-	'canvas': '#canvas',
-	'tut': '#tutorial'
-};
-function page(name) {
-	$($page).hide().children().appendTo('body').hide();
-	
-	if(name=="credits") {
-		PlayBackgroundSound('rap');
-	}
-	
-	if(name=="main") {
-		PlayBackgroundSound('light');
-	}
-
-	if (name) {
-		$($page).append(	$(pages[name]).fadeIn('fast')	).fadeIn('fast');
-		return;
-	} 
+	init(level);
 }
 
-window.onload = function() {
-
-
+$.subscribe('loaded-assets',function () {
 	for(key in levels) {
 		var i = new Image();
 		i.src = "art/menu_art/thumbnails/"+levels[key].thumb;
@@ -39,27 +12,13 @@ window.onload = function() {
 			$('<a data-level="'+levels[key].map+'"><span class="name">'+levels[key].name+'</span></a>' ).append(i).append('<span class="score">Rank: '+levels[key].rank+'</span>')
 		);
 	}
-	
+
 	$('#level-select .list a').click(function (e) {
 		load_level( $(this).data('level') );
 		e.preventDefault();
 	});
 
 
-	
-	$('.page').hide();
-	$page = $('<div id="page"></div>').width( $(document).width() ).height( $(document).height() ).hide();
-	$page.appendTo('body');
-	$(document).resize(function() {
-		$page.width( $(document).width() ).height( $(document).height() );
-	});
-	
-
-	page('main');
-	
-	
-	
-	
 	$('#play').click(function() {
 		page();
 		page('choose-level');
@@ -72,4 +31,7 @@ window.onload = function() {
 		page();
 		page('main');
 	});
-};
+
+	InitSound();
+
+});

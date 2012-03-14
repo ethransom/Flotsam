@@ -12,7 +12,7 @@ Flotasm is a game built with HTML 5 canvas technology for the 2012 Game Jam in S
 * Programming
 	- Steve Taylor
 	- Ethan Ransom
- * Art
+* Art
 	- Joseph Pearman
 	- Jared Evans
 * Audio
@@ -20,11 +20,13 @@ Flotasm is a game built with HTML 5 canvas technology for the 2012 Game Jam in S
 
 ##Playing the Game
 
-Simply download the game (extract it if necessary) and open the `flotsam.html` file in a browser.
+ 1. Download the game (extract it if necessary)
+ 2. Modify Chrome to launch with the `--allow-file-access-from-files` flag ([tutorial on command line flags](http://downloadsquad.switched.com/2010/01/22/how-to-add-command-line-switches-to-google-chrome-or-chromium/))
+ 3. Open the `flotsam.html` file in Chrome.
 
-The game has been tested with the latest version of Chome. Anything else might work, but is not officially endorsed/supported.
+Firefox and IE +9 support is planned, but is still forthcoming.
 
 ##Contributing
 
-The game code is *really* messy, as it was written in 48 hours, but if you want to try, go for it. 
+Loosely follow the conventions in [this](http://nvie.com/posts/a-successful-git-branching-model/) branching model.
 

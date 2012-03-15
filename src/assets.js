@@ -28,9 +28,26 @@ Preloader.def('scripts', function ( url, callback ) {
    return true;
 });
 
+function getExtension( url ) {
+	console.log('Loading ' + (Modernizr.audio.ogg != "") ? '.ogg' : '.wav' + 'sounds');
+	if( Modernizr.audio.ogg != "" ) {
+		return '.ogg';
+	} else {
+		return '.wav';
+	}
+}
+
 Preloader.def('sounds', function ( url, callback ) {
 	var a = new Audio();
 	a.src = url;
+	a.addEventListener('canplaythrough', callback, false);
+	return a;
+});
+
+// Currently, the only diff between the loaders is the ogg support, fix?
+Preloader.def('ogg-sounds', function ( url, callback ) {
+	var a = new Audio();
+	a.src = url + getExtension( url );
 	a.addEventListener('canplaythrough', callback, false);
 	return a;
 });
@@ -95,11 +112,13 @@ window.onload = function () {
 			"audio/Explosions/Explosion1.wav",
 			"audio/Explosions/Explosion2.wav",
 			"audio/Explosions/Explosion3.wav",
-			"audio/odd_noises/item_pickup.wav",
+			"audio/odd_noises/item_pickup.wav"
+		],
+		'ogg-sounds': [
 			// background sounds
-			"audio/musical_dongxi/goblinTheme.wav",
-			"audio/musical_dongxi/rap_better.wav",
-			"audio/musical_dongxi/lighthearty.wav"
+			"audio/musical_dongxi/goblinTheme",
+			"audio/musical_dongxi/rap_better",
+			"audio/musical_dongxi/lighthearty"
 		]
 	});
 };

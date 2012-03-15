@@ -29,9 +29,9 @@ Preloader.def('scripts', function ( url, callback ) {
 });
 
 function getExtension( url ) {
+	console.log('Loading ' + (Modernizr.audio.ogg != "") ? '.ogg' : '.wav' + 'sounds');
 	if( Modernizr.audio.ogg != "" ) {
 		return '.ogg';
-		console.log('Loaded as ogg: '+url);
 	} else {
 		return '.wav';
 	}

@@ -89,6 +89,7 @@ window.onload = function () {
 			'src/js_utils.js',
 			'src/hud.js',
 			'src/sound.js',
+			'src/keyboard.js',
 			'src/hero.js',
 			'src/map.js',
 			'levels/level-list.js',

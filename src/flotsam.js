@@ -105,12 +105,6 @@ var nukeList = new Array;	//	stuff to kill each frame	(not used any more?)
 
 var contactListener;
 
-//	todo: move this to generic module...
-var gKeyboardState = new Array;
-var KEYBOARD_STATE_ARRAY_SIZE = 200;
-var arraySize = KEYBOARD_STATE_ARRAY_SIZE;
-while(arraySize--) gKeyboardState.push(false);
-
 function initsprites()
 {
 	var count = 0;
@@ -912,77 +906,6 @@ function BadGuyFireAt(ship, targetPos)
 	}
 }
 
-//
-//	handle controls
-// TODO: extract to module
-function handlekeys()
-{
-	//var charCode = String.fromCharCode(theCode);	//	need to reverse this search for this and itoa atoi I remember something...
-	
-	var changedX = false;
-	var changedY = false;
-	var	vec = new Box2D.Common.Math.b2Vec2;
-	vec.x = 0;
-	vec.y = 0;
-	
-	var aKey = "A".charCodeAt();
-	if (gKeyboardState[aKey] == true)
-    {
-		vec.x = -MOVE_SPEED;
-		changedX = true;
-    }
-	
-	var dKey = "D".charCodeAt();
-	if (gKeyboardState[dKey] == true)
-	{
-		vec.x = MOVE_SPEED;
-		changedX = true;
-	}
-	
-	var upKey = "W".charCodeAt();
-	if (gKeyboardState[upKey] == true)
-	{
-		vec.y = -MOVE_SPEED;
-		changedY = true;
-	}
-	
-	var downKey = "S".charCodeAt();
-	if (gKeyboardState[downKey] == true)
-	{
-		vec.y = +MOVE_SPEED;
-		changedY = true;
-	}
-	
-	if (changedX || changedY)
-	{
-		var newVec = gHero.body.GetLinearVelocity();
-		if (changedX)
-		{
-			newVec.x += vec.x;
-		}
-		if (changedY)
-		{
-			newVec.y += vec.y;
-		}
-		
-		var checkVec = new RVector;
-		checkVec.x = newVec.x;
-		checkVec.y = newVec.y;
-		var len = checkVec.length();
-		gDebug1 = len;
-		if (len > MAX_SPEED)
-		{
-			checkVec.normalize();
-			checkVec.scale(MAX_SPEED);
-			newVec.x = checkVec.x;
-			newVec.y = checkVec.y;
-		}
-		
-		gHero.body.SetAwake(true);
-		gHero.body.SetLinearVelocity(newVec);
-	}
-}
-
 function KillNukeList()
 {
 	for (var thingIndex = gThings.length-1; thingIndex >= 0; thingIndex--)
@@ -1169,41 +1092,6 @@ function onMouseMove(e)
 	var pos = getRealMousePosition(e);
 	
 	//gActiveGame.mouseMove(pos);	
-}
-
-// Event handler for keydown event
-function onKeyDown(e)
-{
-	
-	var theCode = e.keyCode;
-	
-	//alert("k " + theCode);
-	
-	if (theCode < KEYBOARD_STATE_ARRAY_SIZE)
-		gKeyboardState[theCode] = true;
-
-	//	kludgey crap...
-	if (theCode == "W".charCodeAt())
-		gKeyboardState["S".charCodeAt()] = false;
-	//	kludgey crap...
-	if (theCode == "S".charCodeAt())
-		gKeyboardState["W".charCodeAt()] = false;
-	//	kludgey crap...
-	if (theCode == "A".charCodeAt())
-		gKeyboardState["D".charCodeAt()] = false;
-	//	kludgey crap...
-	if (theCode == "D".charCodeAt())
-		gKeyboardState["A".charCodeAt()] = false;
-}
-
-function onKeyUp(e)
-{
-		
-	var theCode = e.keyCode;
-	
-	if (theCode < KEYBOARD_STATE_ARRAY_SIZE)
-		gKeyboardState[theCode] = false;
-
 }
 
 function Damage(thing)

@@ -38,17 +38,30 @@ function getExtension( url ) {
 }
 
 Preloader.def('sounds', function ( url, callback ) {
+	function loaded() {
+		// For some reason, if we don't remove the handler, the callback gets called twice in Firefox
+		this.removeEventListener('canplaythrough', loaded, false);
+		callback();
+	}
+
 	var a = new Audio();
 	a.src = url;
-	a.addEventListener('canplaythrough', callback, false);
+	a.addEventListener('canplaythrough', loaded, false);
 	return a;
 });
 
+
 // Currently, the only diff between the loaders is the ogg support, fix?
 Preloader.def('ogg-sounds', function ( url, callback ) {
+	function loaded() {
+		// For some reason, if we don't remove the handler, the callback gets called twice in Firefox
+		this.removeEventListener('canplaythrough', loaded, false);
+		callback();
+	}
+
 	var a = new Audio();
 	a.src = url + getExtension( url );
-	a.addEventListener('canplaythrough', callback, false);
+	a.addEventListener('canplaythrough', loaded , false);
 	return a;
 });
 

@@ -20,15 +20,12 @@ $.subscribe('loaded-assets',function () {
 
 
 	$('#play').click(function() {
-		page();
 		page('choose-level');
 	});
 	$('#credits').click(function() {
-		page();
 		page('credits');
 	});
 	$('button.back').click(function() {
-		page();
 		page('main');
 	});
 

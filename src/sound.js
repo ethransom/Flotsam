@@ -113,3 +113,16 @@ function PlayBackgroundSound(id) {
 	} 
 	Preloader.asset('ogg-sounds', bgSounds[id] ).play();
 }
+
+
+$.subscribe('credits-page', function() {
+	PlayBackgroundSound('rap');
+});
+	
+$.subscribe('main-page', function() {
+	PlayBackgroundSound('light');
+});
+	
+$.subscribe('canvas-page', function() {
+	PlayBackgroundSound('song');
+});

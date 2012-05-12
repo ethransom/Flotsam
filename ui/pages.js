@@ -10,23 +10,12 @@ var pages = {
 };
 function page(name) {
 	$($page).hide().children().appendTo('body').hide();
-	
-	if(name=="credits") {
-		PlayBackgroundSound('rap');
-	}
-	
-	if(name=="main") {
-		PlayBackgroundSound('light');
-	}
-	
-	if(name=="canvas") {
-		PlayBackgroundSound('song');
-	}
 
-	if (name) {
-		$($page).append(	$(pages[name]).fadeIn('fast')	).fadeIn('fast');
-		return;
-	} 
+	
+	$($page).append(	$(pages[name]).fadeIn('fast')	).fadeIn('fast');
+	
+	console.log("Page: " + name + '-page');
+	$.publish(name + '-page');
 }
 
 $(function () {

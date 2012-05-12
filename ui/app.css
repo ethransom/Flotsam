@@ -141,6 +141,7 @@ button#play {
 	background-color: transparent;
 	border: none;
 	text-indent: -9999em;
+	cursor: pointer;
 }
 button#play:hover {
 	background-image: url("../art/menu_art/play_button_hi.png");
@@ -154,6 +155,7 @@ button#credits {
 	background-color: transparent;
 	border: none;
 	text-indent: -9999em;
+	cursor: pointer;
 }
 button#credits:hover {
 	background-image: url("../art/menu_art/credits_button_hi.png");

@@ -118,7 +118,7 @@ function LoadCollisFromXML(levelName)
 			thing.sprite = new Object;
 			thing.sprite.scale = 1.0;
 
-			thing.sprite.image = Preloader.asset('images', imageAsset);
+			thing.sprite.image = Fetch.asset('image', imageAsset);
 
 
 			gThings[gThings.length] = thing;

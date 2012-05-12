@@ -49,7 +49,7 @@ function InitSound()
 	for (var key in sounds) {
 		for( var i = 0; i<sounds[key].length; i++) {
 			var s = sounds[key][i];
-			var a = Preloader.asset('sounds',s);
+			var a = Fetch.asset('sound',s);
 			
 			if(key=='fire') {
 				a.volume = .9;
@@ -94,7 +94,7 @@ function InitBGSounds() {
 	
 	for (var key in bgSounds) {
 		var s = bgSounds[key];
-		var sound = Preloader.asset('ogg-sounds',s);
+		var sound = Fetch.asset('ogg-sound',s);
 		sound.loop = true;
  		sound.addEventListener('ended', function(){
 			this.currentTime = 0;
@@ -107,11 +107,11 @@ InitBGSounds();
 function PlayBackgroundSound(id) {
  	for (var key in bgSounds) {
 		var s = bgSounds[key];
-		var sound = Preloader.asset('ogg-sounds',s);
+		var sound = Fetch.asset('ogg-sound',s);
 		sound.pause();
 		sound.currentTime = 0;
 	} 
-	Preloader.asset('ogg-sounds', bgSounds[id] ).play();
+	Fetch.asset('ogg-sound', bgSounds[id] ).play();
 }
 
 

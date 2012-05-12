@@ -1,32 +1,6 @@
 /* 
- * Load the assets using the preloader module
+ * Load the assets using Fetch
 */
-
-Preloader.def('images',function ( url, callback ) {
-	var img = new Image();
-	img.onload = callback;
-	img.src = url;
-	return img;
-});
-
-Preloader.def('foo', function ( string, callback ) {
-	setTimeout( callback, Math.floor( Math.random() * 2000 ) );
-	return string;
-});
-
-Preloader.def('scripts', function ( url, callback ) {
-	var head = document.getElementsByTagName('head')[0];
-	var script = document.createElement('script');
-	script.type = 'text/javascript';
-	script.onreadystatechange = function () {
-		if (this.readyState === 'complete') 
-			callback();
-	}
-	script.onload = callback;
-	script.src = url;
-	head.appendChild(script);
-   return true;
-});
 
 function getExtension( url ) {
 	console.log('Loading ' + (Modernizr.audio.ogg != "") ? '.ogg' : '.wav' + 'sounds');
@@ -37,7 +11,7 @@ function getExtension( url ) {
 	}
 }
 
-Preloader.def('sounds', function ( url, callback ) {
+Fetch.loader('sound', function ( url, callback ) {
 	function loaded() {
 		// For some reason, if we don't remove the handler, the callback gets called twice in Firefox
 		this.removeEventListener('canplaythrough', loaded, false);
@@ -52,7 +26,7 @@ Preloader.def('sounds', function ( url, callback ) {
 
 
 // Currently, the only diff between the loaders is the ogg support, fix?
-Preloader.def('ogg-sounds', function ( url, callback ) {
+Fetch.loader('ogg-sound', function ( url, callback ) {
 	function loaded() {
 		// For some reason, if we don't remove the handler, the callback gets called twice in Firefox
 		this.removeEventListener('canplaythrough', loaded, false);
@@ -66,8 +40,8 @@ Preloader.def('ogg-sounds', function ( url, callback ) {
 });
 
 window.onload = function () {
-	Preloader.load({
-		'images': [
+	Fetch.load({
+		'image': [
 			'art/raft_small.png',
 			'art/evil_boat_small.png',
 			'art/evil_boat_green.png',
@@ -95,7 +69,7 @@ window.onload = function () {
 			// end screen banner
 			"art/menu_art/gameover.png",
 		],
-		'scripts': [
+		'script': [
 			'src/Box2D.js',
 			'src/vector.js',
 			'src/flotsam.js',
@@ -108,7 +82,7 @@ window.onload = function () {
 			'levels/level-list.js',
 			'ui/ui.js'
 		],
-		'sounds': [
+		'sound': [
 			"audio/goblin_voices/goblinv_mono/gv1.wav",
 			"audio/goblin_voices/goblinv_mono/gv2.wav",
 			"audio/goblin_voices/goblinv_mono/gv3.wav",
@@ -128,7 +102,7 @@ window.onload = function () {
 			"audio/Explosions/Explosion3.wav",
 			"audio/odd_noises/item_pickup.wav"
 		],
-		'ogg-sounds': [
+		'ogg-sound': [
 			// background sounds
 			"audio/musical_dongxi/goblinTheme",
 			"audio/musical_dongxi/rap_better",
@@ -137,6 +111,25 @@ window.onload = function () {
 	});
 };
 
+var $loadBar;
+$(function () {
+	$loadBar = $('<div></div>')
+	$loadBar.width( 0 );
+	
+	$('<div></div>')
+		.attr('id', 'load-wrapper')
+		.append( $loadBar )
+		.appendTo( $('#loading') );
+		
+});
+Fetch.on('update',function ( percent ) {
+	$loadBar.width( percent * 300 );
+});
+
+Fetch.on('done',function () {
+	$.publish('loaded-assets');
+});
+	
 $.subscribe('loaded-assets',function () {
 	page('main');
 	// console.log('Load Complete');

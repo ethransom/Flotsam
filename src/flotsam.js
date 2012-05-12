@@ -41,7 +41,7 @@ var gGameState = GAME_STATE_PLAYING;	//	todo fix this
 
 var world;	//	box2d world!
 
-var endingSprite = Preloader.asset('images',"art/menu_art/gameover.png");
+var endingSprite = Fetch.asset('image',"art/menu_art/gameover.png");
 
 // box2d must be loaded first
 $.subscribe('loaded-assets',function () {
@@ -111,7 +111,7 @@ function initsprites()
 	
 	gThingSprites[count] = new Object;
 	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Preloader.asset('images','art/raft_small.png');
+	gThingSprites[count].image = Fetch.asset('image','art/raft_small.png');
 	GRAPHIC_RAFT = count;
 	count++;
 	
@@ -119,31 +119,31 @@ function initsprites()
 	
 	gThingSprites[count] = new Object;
 	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Preloader.asset('images',"art/evil_boat_small.png");
+	gThingSprites[count].image = Fetch.asset('image',"art/evil_boat_small.png");
 	GRAPHIC_BADGUY1 = count;
 	count++;
 	
 	gThingSprites[count] = new Object;
 	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Preloader.asset('images', "art/evil_boat_green.png");
+	gThingSprites[count].image = Fetch.asset('image', "art/evil_boat_green.png");
 	GRAPHIC_BADGUY2 = count;
 	count++;
 	
 	gThingSprites[count] = new Object;
 	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Preloader.asset('images',"art/evil_boat_yellow.png");
+	gThingSprites[count].image = Fetch.asset('image',"art/evil_boat_yellow.png");
 	GRAPHIC_BADGUY3 = count;
 	count++;
 	
 	gThingSprites[count] = new Object;
 	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Preloader.asset('images',"art/evil_boat_blue.png");
+	gThingSprites[count].image = Fetch.asset('image',"art/evil_boat_blue.png");
 	GRAPHIC_BADGUY4 = count;
 	count++;
 	
 	gThingSprites[count] = new Object;
 	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Preloader.asset('images',"art/evil_boat_red.png");
+	gThingSprites[count].image = Fetch.asset('image',"art/evil_boat_red.png");
 	GRAPHIC_BADGUY5 = count;
 	count++;
 	
@@ -151,19 +151,19 @@ function initsprites()
 	
 	gThingSprites[count] = new Object;
 	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Preloader.asset('images',"art/raft_small_1.png");
+	gThingSprites[count].image = Fetch.asset('image',"art/raft_small_1.png");
 	GRAPHIC_HERO1 = count;
 	count++;
 	
 	gThingSprites[count] = new Object;
 	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Preloader.asset('images',"art/raft_small_2.png");
+	gThingSprites[count].image = Fetch.asset('image',"art/raft_small_2.png");
 	GRAPHIC_HERO2 = count;
 	count++;
 	
 	gThingSprites[count] = new Object;
 	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Preloader.asset('images',"art/raft_small_3.png");
+	gThingSprites[count].image = Fetch.asset('image',"art/raft_small_3.png");
 	GRAPHIC_HERO3 = count;
 	count++;
 	
@@ -176,25 +176,25 @@ function initsprites()
 	
 	gThingSprites[count] = new Object;
 	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Preloader.asset('images',"art/ball.png");
+	gThingSprites[count].image = Fetch.asset('image',"art/ball.png");
 	GRAPHIC_BULLET = count;
 	count++;
 	
 	gThingSprites[count] = new Object;
 	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Preloader.asset('images',"art/raft_cannon_01.png");
+	gThingSprites[count].image = Fetch.asset('image',"art/raft_cannon_01.png");
 	GRAPHIC_PICKUP_CANNON = count;
 	count++;
 	
 	gThingSprites[count] = new Object;
 	gThingSprites[count].scale = 0.1;
-	gThingSprites[count].image = Preloader.asset('images',"art/drift_woot_02.png");
+	gThingSprites[count].image = Fetch.asset('image',"art/drift_woot_02.png");
 	GRAPHIC_PICKUP_CREW = count;
 	count++;
 	
 	gThingSprites[count] = new Object;
 	gThingSprites[count].scale = 0.1;
-	gThingSprites[count].image = Preloader.asset('images',"art/drift_woot_02.png");
+	gThingSprites[count].image = Fetch.asset('image',"art/drift_woot_02.png");
 	GRAPHIC_PICKUP_POINTS = count;
 	count++;
 	
@@ -202,19 +202,19 @@ function initsprites()
 
 	gThingSprites[count] = new Object;
 	gThingSprites[count].scale = 1.5;
-	gThingSprites[count].image = Preloader.asset('images',"art/splash_02.png");
+	gThingSprites[count].image = Fetch.asset('image',"art/splash_02.png");
 	GRAPHIC_SPLASH = count;
 	count++;
 
 	gThingSprites[count] = new Object;
 	gThingSprites[count].scale = 0.5;
-	gThingSprites[count].image = Preloader.asset('images',"art/explosions.png");
+	gThingSprites[count].image = Fetch.asset('image',"art/explosions.png");
 	GRAPHIC_EXPLOSION = count;
 	count++;
 	
 	gThingSprites[count] = new Object;
 	gThingSprites[count].scale = 2.0;
-	gThingSprites[count].image = Preloader.asset('images',"art/fire_blob_03.png");
+	gThingSprites[count].image = Fetch.asset('image',"art/fire_blob_03.png");
 	GRAPHIC_FIRE = count;
 	count++;
 
@@ -304,7 +304,7 @@ function CreateBadguy(posx, posy, radius, hp, range, rate, strength, shipClass)
 		thing.sprite.scale = 1.0;
 		// thing.sprite.image = new Image();
 		// thing.sprite.image.src = "" + shipClass + ".png";
-		thing.sprite.image = Preloader.asset('images', "" + shipClass + ".png");
+		thing.sprite.image = Fetch.asset('image', "" + shipClass + ".png");
 		thing.scoreValue = 4000;
 	}
 	else

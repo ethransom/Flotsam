@@ -1,0 +1,3 @@
+[submodule "lib/fetch"]
+	path = lib/fetch
+	url = git@github.com:Schnauzer/fetch.git

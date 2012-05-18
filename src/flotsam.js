@@ -46,16 +46,16 @@ var endingSprite = Fetch.asset('image',"art/menu_art/gameover.png");
 // box2d must be loaded first
 $.subscribe('loaded-assets',function () {
 	//box2d objects
-	window.b2Vec2 = Box2D.Common.Math.b2Vec2
-	window.b2BodyDef = Box2D.Dynamics.b2BodyDef
-	window.b2Body = Box2D.Dynamics.b2Body
-	window.b2FixtureDef = Box2D.Dynamics.b2FixtureDef
-	window.b2Fixture = Box2D.Dynamics.b2Fixture
-	window.b2World = Box2D.Dynamics.b2World
-	window.b2MassData = Box2D.Collision.Shapes.b2MassData
-	window.b2PolygonShape = Box2D.Collision.Shapes.b2PolygonShape
-	window.b2CircleShape = Box2D.Collision.Shapes.b2CircleShape
-	window.b2DebugDraw = Box2D.Dynamics.b2DebugDraw
+	window.b2Vec2 = Box2D.Common.Math.b2Vec2;
+	window.b2BodyDef = Box2D.Dynamics.b2BodyDef;
+	window.b2Body = Box2D.Dynamics.b2Body;
+	window.b2FixtureDef = Box2D.Dynamics.b2FixtureDef;
+	window.b2Fixture = Box2D.Dynamics.b2Fixture;
+	window.b2World = Box2D.Dynamics.b2World;
+	window.b2MassData = Box2D.Collision.Shapes.b2MassData;
+	window.b2PolygonShape = Box2D.Collision.Shapes.b2PolygonShape;
+	window.b2CircleShape = Box2D.Collision.Shapes.b2CircleShape;
+	window.b2DebugDraw = Box2D.Dynamics.b2DebugDraw;
 });
 
 var COLLIS_WORLD = 0x0002;
@@ -93,130 +93,57 @@ var GRAPHIC_FIRE = 14;
 
 var gDT = 1/100.0;	//	dtime.  see calculation near framerate update
 
-var gThings = new Array;
-//var gNukeList = new Array;
+var gThings = [];
+
 var gHero;
 
 var gPhysScale = 32.0;	//	physics world is smaller than rendering world... maybe for physics behaving nicely?
 
-var gThingSprites = new Array;
-
-var nukeList = new Array;	//	stuff to kill each frame	(not used any more?)
+var gThingSprites = [];
 
 var contactListener;
 
 function initsprites()
 {
-	var count = 0;
-	
-	gThingSprites[count] = new Object;
-	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Fetch.asset('image','art/raft_small.png');
-	GRAPHIC_RAFT = count;
-	count++;
-	
-	//---------------------
-	
-	gThingSprites[count] = new Object;
-	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Fetch.asset('image',"art/evil_boat_small.png");
-	GRAPHIC_BADGUY1 = count;
-	count++;
-	
-	gThingSprites[count] = new Object;
-	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Fetch.asset('image', "art/evil_boat_green.png");
-	GRAPHIC_BADGUY2 = count;
-	count++;
-	
-	gThingSprites[count] = new Object;
-	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Fetch.asset('image',"art/evil_boat_yellow.png");
-	GRAPHIC_BADGUY3 = count;
-	count++;
-	
-	gThingSprites[count] = new Object;
-	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Fetch.asset('image',"art/evil_boat_blue.png");
-	GRAPHIC_BADGUY4 = count;
-	count++;
-	
-	gThingSprites[count] = new Object;
-	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Fetch.asset('image',"art/evil_boat_red.png");
-	GRAPHIC_BADGUY5 = count;
-	count++;
-	
-	//---------------------
-	
-	gThingSprites[count] = new Object;
-	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Fetch.asset('image',"art/raft_small_1.png");
-	GRAPHIC_HERO1 = count;
-	count++;
-	
-	gThingSprites[count] = new Object;
-	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Fetch.asset('image',"art/raft_small_2.png");
-	GRAPHIC_HERO2 = count;
-	count++;
-	
-	gThingSprites[count] = new Object;
-	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Fetch.asset('image',"art/raft_small_3.png");
-	GRAPHIC_HERO3 = count;
-	count++;
-	
-	//gThingSprites[count] = new Object;
-	//gThingSprites[count].scale = 1.0;
-	//gThingSprites[count].image = new Image();
-	//gThingSprites[count].image.src = "art/raft_small_3.png";
-	//GRAPHIC_HERO4 = count;
-	//count++;
-	
-	gThingSprites[count] = new Object;
-	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Fetch.asset('image',"art/ball.png");
-	GRAPHIC_BULLET = count;
-	count++;
-	
-	gThingSprites[count] = new Object;
-	gThingSprites[count].scale = 1.0;
-	gThingSprites[count].image = Fetch.asset('image',"art/raft_cannon_01.png");
-	GRAPHIC_PICKUP_CANNON = count;
-	count++;
-	
-	gThingSprites[count] = new Object;
-	gThingSprites[count].scale = 0.1;
-	gThingSprites[count].image = Fetch.asset('image',"art/drift_woot_02.png");
-	GRAPHIC_PICKUP_CREW = count;
-	count++;
-	
-	gThingSprites[count] = new Object;
-	gThingSprites[count].scale = 0.1;
-	gThingSprites[count].image = Fetch.asset('image',"art/drift_woot_02.png");
-	GRAPHIC_PICKUP_POINTS = count;
-	count++;
-	
-	//---
+	var image_list = [
+		'art/raft_small.png',
+		"art/evil_boat_small.png",
+		"art/evil_boat_green.png",
+		"art/evil_boat_yellow.png",
+		"art/evil_boat_blue.png",
+		"art/evil_boat_red.png",
+		"art/raft_small_1.png",
+		"art/raft_small_2.png",
+		"art/raft_small_3.png",
+		"art/ball.png",
+		"art/raft_cannon_01.png",
+		"art/drift_woot_02.png",
+		"art/drift_woot_02.png",
+		"art/splash_02.png",
+		"art/explosions.png",
+		"art/fire_blob_03.png"
+	];
 
-	gThingSprites[count] = new Object;
-	gThingSprites[count].scale = 1.5;
-	gThingSprites[count].image = Fetch.asset('image',"art/splash_02.png");
-	GRAPHIC_SPLASH = count;
-	count++;
+	for( var i = 0; i < image_list.length; i++ ) {
+		var sprite = {},
+			url = image_list[i];
 
-	gThingSprites[count] = new Object;
-	gThingSprites[count].scale = 0.5;
-	gThingSprites[count].image = Fetch.asset('image',"art/explosions.png");
-	GRAPHIC_EXPLOSION = count;
-	count++;
-	
-	gThingSprites[count] = new Object;
-	gThingSprites[count].scale = 2.0;
-	gThingSprites[count].image = Fetch.asset('image',"art/fire_blob_03.png");
-	GRAPHIC_FIRE = count;
-	count++;
+		// some sprites have different scaling
+		// this will go away once the sprites are 
+		// drawn/managed objectively, and not procedurally 
+		if ( url === 'art/splash_02.png' )
+			sprite.scale = 1.5;
+		else if ( url === 'art/explosions.png' )
+			sprite.scale = 0.5;
+		else if ( url === 'art/fire_blob_03.png' )
+			sprite.scale = 2.0;
+		else
+			sprite.scale = 1.0;
+
+		sprite.image = Fetch.asset( 'image', url );
+
+		gThingSprites.push( sprite );
+	}
 
 }
 
@@ -235,7 +162,7 @@ function initThing(thing)
 
 function CreateBadguy(posx, posy, radius, hp, range, rate, strength, shipClass)
 {
-	var thing = new Object;
+	var thing = {};
 	initThing(thing);
 	thing.name = "badguy" + posx + "," + posy;
 	
@@ -255,18 +182,18 @@ function CreateBadguy(posx, posy, radius, hp, range, rate, strength, shipClass)
 		}
 	}
 	
-	var fixDef = new b2FixtureDef;
+	var fixDef = new b2FixtureDef();
 	fixDef.density = 1.0;
 	fixDef.friction = 0.5;
 	fixDef.restitution = 0.2;
 	
-	var bodyDef = new b2BodyDef;
+	var bodyDef = new b2BodyDef();
 	bodyDef.type = b2Body.b2_dynamicBody;
 	
 	if (0)//(Math.random() > 0.5)
 	{
 		var PTM_RATIO = 2;
-		fixDef.shape = new b2PolygonShape;
+		fixDef.shape = new b2PolygonShape();
 		var S = 1.1;
 		var verts = new Array(
 			new b2Vec2(0, -S),
@@ -300,7 +227,7 @@ function CreateBadguy(posx, posy, radius, hp, range, rate, strength, shipClass)
 	
 	if (shipClass.substr(0, 3) == "art")	//	assume this is an asset
 	{
-		thing.sprite = new Object;
+		thing.sprite = {};
 		thing.sprite.scale = 1.0;
 		// thing.sprite.image = new Image();
 		// thing.sprite.image.src = "" + shipClass + ".png";
@@ -326,7 +253,7 @@ function CreateBadguy(posx, posy, radius, hp, range, rate, strength, shipClass)
 
 function CreateEffect(posx, posy, graphicIndex, time)
 {
-	var thing = new Object;
+	var thing = {};
 	initThing(thing);
 	thing.name = "effect" + posx + "," + posy;
 	
@@ -348,8 +275,8 @@ function CreateEffect(posx, posy, graphicIndex, time)
 
 // cleanly shuts down the game
 function uninit() {
-	gThingSprites = new Array;
-	var gThings = new Array;
+	gThingSprites = [];
+	var gThings = [];
 	var gHero = null;
 	world = null;
 
@@ -376,21 +303,21 @@ function init(levelName) {
 
 	world = new b2World(
 		//new b2Vec2(0, 10)    //gravity
-		new b2Vec2(0, 0)    //no gravity
-		,  true                 //allow sleep
+		new b2Vec2(0, 0),    //no gravity
+		true                 //allow sleep
 	);
 	
 	//world.SetContactListener(MyContactListener);
-	contactListener = new Box2D.Dynamics.b2ContactListener;
+	contactListener = new Box2D.Dynamics.b2ContactListener();
 	contactListener.PostSolve = postSolve;
 	world.SetContactListener(contactListener);
 
-	var fixDef = new b2FixtureDef;
+	var fixDef = new b2FixtureDef();
 	fixDef.density = 1.0;
 	fixDef.friction = 0.5;
 	fixDef.restitution = 0.2;
 
-	var bodyDef = new b2BodyDef;
+	var bodyDef = new b2BodyDef();
 	
 	//	new test
 	LoadCollisFromXML(levelName);
@@ -398,11 +325,11 @@ function init(levelName) {
 	//create some objects
 	bodyDef.type = b2Body.b2_dynamicBody;
 	//	hero
-	var thing = new Object;
+	var thing = {};
 	initThing(thing);
 	thing.name = "hero";
 	
-	fixDef.shape = new b2PolygonShape;
+	fixDef.shape = new b2PolygonShape();
 	if (0) {
 		var S = 0.8;
 		var verts = new Array(
@@ -443,7 +370,7 @@ function init(levelName) {
 
 	gThings[gThings.length] = thing;
 	gHero = thing;
-	gHero.addons = new Array;
+	gHero.addons = [];
 	gHero.frame = 0;
 	gHero.frameCounter = 0.5;
 	gHero.health = INIT_HERO_HEALTH;
@@ -522,7 +449,7 @@ function UpdateObjects()
 
 function CreatePickup(x, y)
 {
-	thing = new Object;
+	thing = {};
 	initThing(thing);
 	thing.name = "pickup";
 	
@@ -551,7 +478,7 @@ function HandlePickups()
 			{
 				//	pick up!
 				count = gHero.addons.length;
-				gHero.addons[count] = new Object;
+				gHero.addons[count] = {};
 				gHero.addons[count].typeID = 1;	//	keep track of pickup type!
 				gHero.addons[count].cooldown = 0;
 				
@@ -575,7 +502,7 @@ function HandlePickups()
 function KillThing(thing)
 {
 	thing.sprite = undefined;
-	if (thing.body != undefined)
+	if ( typeof thing.body !== 'undefined' )
 		world.DestroyBody(thing.body);
 	thing.body = undefined;
 }				
@@ -632,7 +559,7 @@ function UpdateAndKillDeadThings()
 				PlaySound(SOUND_DIE_SELECT);
 				
 				//	respawn...
-				var	vec = new Box2D.Common.Math.b2Vec2;
+				var	vec = new Box2D.Common.Math.b2Vec2();
 				vec.x = 0;
 				vec.y = 0;
 				gHero.body.SetPositionAndAngle(vec, 0);
@@ -665,7 +592,7 @@ function updateThingPositions()
 {
 	for (var i = 0; i < gThings.length; i++)
 	{
-		if (gThings[i].body != undefined)
+		if ( typeof gThings[i].body !== 'undefined' )
 		{
 			var bpos = gThings[i].body.GetPosition();
 			gThings[i].pos.x = bpos.x * gPhysScale;
@@ -679,7 +606,7 @@ function updateThingPositions()
 	
 	//	update hero direction to match velocity.
 	var curVec = gHero.body.GetLinearVelocity();
-	var myVec = new RVector;
+	var myVec = new RVector();
 	myVec.x = curVec.x;
 	myVec.y = curVec.y;
 
@@ -771,7 +698,7 @@ function drawstuff()
 	drawHUD();
 	
 	ctx.fillStyle = "#302010";
-	ctx.lineWidth
+	// ctx.lineWidth
 	ctx.beginPath();
 	ctx.moveTo(0, 0);
 	ctx.lineTo(SCREEN_WIDTH, 0);
@@ -807,12 +734,12 @@ function movestuff()
 		{
 			firstBody = firstBody.GetNext();
 
-			if (firstBody == undefined)
+			if ( typeof firstBody === 'undefined' )
 				return;
 		}
 
-		var	vec = new Box2D.Common.Math.b2Vec2;
-		var pos = new Box2D.Common.Math.b2Vec2;	//GetPosition
+		var	vec = new Box2D.Common.Math.b2Vec2();
+		var pos = new Box2D.Common.Math.b2Vec2();	//GetPosition
 		vec.x = (Math.random() * 2 - 1) * 3;
 		vec.y = (Math.random() * 2 - 1) * 3;
 		pos.x = 0;
@@ -828,7 +755,7 @@ function movestuff()
 //
 function CreateBullet(sourceAngle, sourceX, sourceY, targetX, targetY, baseVelocity, catBits, maskBits, shotLife)
 {
-	var fixDef = new b2FixtureDef;
+	var fixDef = new b2FixtureDef();
 	fixDef.density = 1.0;
 	fixDef.friction = 0.5;
 	fixDef.restitution = 0.2;
@@ -839,7 +766,7 @@ function CreateBullet(sourceAngle, sourceX, sourceY, targetX, targetY, baseVeloc
 	fixDef.filter.categoryBits = catBits;
 	fixDef.filter.maskBits = maskBits;
 	
-	var bodyDef = new b2BodyDef;
+	var bodyDef = new b2BodyDef();
 	bodyDef.type = b2Body.b2_dynamicBody;
 	
 	var sourcePos = new RVector(sourceX, sourceY);
@@ -847,7 +774,7 @@ function CreateBullet(sourceAngle, sourceX, sourceY, targetX, targetY, baseVeloc
 	bodyDef.position.y = sourceY / gPhysScale;
 	//	todo set bullet flag so the system does continuous collision detection?
 	
-	var thing = new Object;
+	var thing = {};
 	initThing(thing);
 	thing.name = "bullet";
 	
@@ -867,7 +794,7 @@ function CreateBullet(sourceAngle, sourceX, sourceY, targetX, targetY, baseVeloc
 	//	scale, converting to physics coordinates at the same time, but also setting a reasonable speed...
 	targetVector.scale(5.0);	//	adjust this...
 	
-	var	vec = new Box2D.Common.Math.b2Vec2;
+	var	vec = new Box2D.Common.Math.b2Vec2();
 	vec.x = targetVector.x;
 	vec.y = targetVector.y;
 	//	add velocity of hero, which is more realistic...
@@ -954,7 +881,7 @@ function updateGame() {
 	}
 	
 	// Create hero's fire effects
-	if (Math.floor(Math.random() * 10) == 0)
+	if (Math.floor(Math.random() * 10) === 0)
 	{
 		CreateEffect(gHero.pos.x - 30 + Math.random() * 60, gHero.pos.y - 30 + Math.random() * 60, GRAPHIC_FIRE, 0.5);
 	}
@@ -979,10 +906,10 @@ function updateGame() {
 	//gHero.body.SetAngle(0);
 	
 	world.Step(
-		gDT*2
+		gDT*2,
 		//1 / 60   //frame-rate
-		,  10       //velocity iterations
-		,  10       //position iterations
+		10,       //velocity iterations
+		10       //position iterations
 		);
 		
 	//	detect time up... todo MOVE THIS
@@ -1012,7 +939,7 @@ function updateGame() {
 	updateThingPositions();
 	
 	world.ClearForces();
-};
+}
 
 function pauseGame() {	gGameState = GAME_STATE_PAUSED;	}
 
@@ -1042,14 +969,14 @@ function update()
 //provides pollyfill for requestAnimationFrame
 // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
 window.requestAnimFrame = (function(){
-  return  window.requestAnimationFrame       || 
-		  window.webkitRequestAnimationFrame || 
-		  window.mozRequestAnimationFrame    || 
-		  window.oRequestAnimationFrame      || 
-		  window.msRequestAnimationFrame     || 
-		  function( callback ){
+	return  window.requestAnimationFrame       || 
+		window.webkitRequestAnimationFrame || 
+		window.mozRequestAnimationFrame    || 
+		window.oRequestAnimationFrame      || 
+		window.msRequestAnimationFrame     || 
+		function( callback ){
 			window.setTimeout(callback, 1000 / 60);
-		  };
+		};
 })();
 
 //http://answers.oreilly.com/topic/1929-how-to-use-the-canvas-and-draw-elements-in-html5/
@@ -1060,7 +987,7 @@ window.requestAnimFrame = (function(){
 //
 function getRealMousePosition(e) 
 {
-	var pos = new RVector;
+	var pos = new RVector();
  
 	if (e.pageX || e.pageY) {
       pos.x = e.pageX;
@@ -1096,11 +1023,11 @@ function onMouseMove(e)
 
 function Damage(thing)
 {
-	if (thing != undefined)
+	if ( thing !== null )
 	{
 		thing.damageThisTurn += DAMAGE_FROM_CANNONBALL;
 		
-		if (thing == gHero)
+		if ( thing === gHero )
 			PlaySound(SOUND_HIT_HERO_SELECT);
 		else
 			PlaySound(SOUND_HIT_ENEMY_SELECT);
@@ -1122,26 +1049,26 @@ function postSolve(contact, impulse)
 	var hitter;
 	var victim;
 	
-	if (thingA != undefined && thingA.typeID == OBJECT_BULLET && thingA.toNuke != true)
+	if ( thingA !== null && thingA.typeID === OBJECT_BULLET && thingA.toNuke !== true )
 	{
 		hitter = thingA;
 		victim = thingB;
 	}
-	if (thingB != undefined && thingB.typeID == OBJECT_BULLET && thingB.toNuke != true)
+	if ( thingB !== null && thingB.typeID === OBJECT_BULLET && thingB.toNuke !== true)
 	{
 		hitter = thingB;
 		victim = thingA;
 	}
 	
-	if (hitter != undefined)
+	if ( typeof hitter !== 'undefined' )
 	{
 		hitter.toNuke = true;	//	kill ball
 		
-		if (victim != undefined)
+		if ( victim !== null )
 		{
 			Damage(victim);
 			
-			if (victim.typeID == OBJECT_BADGUY || victim.typeID == OBJECT_HERO)
+			if ( victim.typeID === OBJECT_BADGUY || victim.typeID === OBJECT_HERO )
 				CreateEffect(hitter.pos.x, hitter.pos.y, GRAPHIC_EXPLOSION, 0.5);
 		} else {
 			//	hit wall?
